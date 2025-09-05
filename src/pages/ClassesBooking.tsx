@@ -1,0 +1,520 @@
+import React, { useState } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Button } from '../components/ui/button';
+import { Calendar, Clock, MapPin, Users, Star, Footprints } from 'lucide-react';
+
+const ClassesBooking = () => {
+  const [activeTab, setActiveTab] = useState<'yoga' | 'reflexology'>('yoga');
+  const classTypes = [
+    {
+      name: "Hatha Yoga",
+      description: "Gentle, slower-paced practice focusing on basic postures and breathing techniques. Perfect for beginners and those seeking a calming practice.",
+      duration: "60 minutes",
+      level: "All levels",
+      benefits: ["Improved flexibility", "Stress reduction", "Better posture", "Mind-body connection"]
+    },
+    {
+      name: "Yin Yoga",
+      description: "Deep, meditative practice holding poses for longer periods to target connective tissues. Ideal for relaxation and flexibility.",
+      duration: "60 minutes",
+      level: "All levels",
+      benefits: ["Deep relaxation", "Increased flexibility", "Stress relief", "Joint mobility"]
+    },
+    {
+      name: "Ashtanga Yoga",
+      description: "Dynamic, flowing practice with a set sequence of poses. Builds strength, flexibility, and endurance.",
+      duration: "60 minutes",
+      level: "All levels (modifications provided)",
+      benefits: ["Increased strength", "Better flexibility", "Improved focus", "Physical challenge"]
+    }
+  ];
+
+  const locations = [
+    {
+      name: "Troon Old Parish Church",
+      address: "Troon, Ayrshire",
+      day: "Wednesday",
+      time: "10:00 AM",
+      type: "Hatha Yoga"
+    },
+    {
+      name: "Woodlands Centre Irvine",
+      address: "Irvine, Ayrshire",
+      day: "Monday",
+      time: "7:00 PM",
+      type: "Mixed Styles",
+      zoom: true
+    },
+    {
+      name: "Barassie Beach",
+      address: "Troon, Ayrshire",
+      day: "Wednesday",
+      time: "7:00 PM",
+      type: "Beach Yoga",
+      weather: "Weather permitting"
+    },
+    {
+      name: "St Meddan's Church",
+      address: "Troon, Ayrshire",
+      day: "Wednesday",
+      time: "7:00 PM",
+      type: "Mixed Styles",
+      weather: "Alternative to beach"
+    },
+    {
+      name: "Corespace Kilwinning",
+      address: "Kilwinning, Ayrshire",
+      day: "Thursday",
+      time: "6:00 PM",
+      type: "Yin Yoga"
+    },
+    {
+      name: "Corespace Kilwinning",
+      address: "Kilwinning, Ayrshire",
+      day: "Thursday",
+      time: "7:15 PM",
+      type: "Ashtanga Yoga",
+      zoom: true
+    }
+  ];
+
+  const specialSessions = [
+    {
+      name: "Monthly Bedtime Yoga & Sound Bath",
+      location: "Kilwinning",
+      description: "A special monthly session combining gentle yoga with sound healing for deep relaxation and better sleep.",
+      price: "£10",
+      duration: "90 minutes"
+    },
+    {
+      name: "Beach Yoga Sessions",
+      location: "Barassie Beach, Troon",
+      description: "Outdoor yoga practice by the sea, weather permitting. A unique experience connecting with nature.",
+      price: "Regular class price",
+      duration: "60 minutes"
+    }
+  ];
+
+  const reflexologyInfo = {
+    description: "Experience the healing power of aromatherapy reflexology in my peaceful Irvine studio. These 60-minute treatments focus on your feet to promote natural healing, stress relief, and improved wellbeing.",
+    details: "Reflexology is a gentle, non-invasive therapy that works by applying pressure to specific points on the feet that correspond to different organs and systems in the body. Combined with aromatherapy, it creates a deeply relaxing and therapeutic experience.",
+    benefits: [
+      "Stress relief and relaxation",
+      "Improved sleep quality",
+      "Increased energy levels",
+      "Natural healing support",
+      "Enhanced circulation",
+      "Better overall wellbeing"
+    ],
+    availability: {
+      days: "Thursdays and Fridays",
+      times: "During the day (last appointments at 3:30pm)",
+      location: "Irvine studio (in-home)",
+      price: "£36 per session"
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-background">
+      <div className="max-w-6xl mx-auto">
+        <Header />
+        
+        <main className="py-20">
+          {/* Hero Section */}
+          <section className="text-center mb-16 px-6">
+            <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
+              Classes & Booking
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
+              {activeTab === 'yoga' 
+                ? "Join me for weekly yoga classes across Troon, Irvine, and Kilwinning. All levels welcome - from complete beginners to advanced practitioners."
+                : "Experience the healing power of aromatherapy reflexology in my peaceful Irvine studio. Gentle, non-invasive treatments for natural healing and wellbeing."
+              }
+            </p>
+            
+            {/* Toggle Buttons */}
+            <div className="flex justify-center gap-4 mb-8">
+              <button
+                onClick={() => setActiveTab('yoga')}
+                className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                  activeTab === 'yoga'
+                    ? 'bg-primary text-primary-foreground shadow-lg'
+                    : 'bg-card text-foreground hover:bg-accent/50 border border-border'
+                }`}
+              >
+                <Star className="w-5 h-5" />
+                Yoga Classes
+              </button>
+              <button
+                onClick={() => setActiveTab('reflexology')}
+                className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                  activeTab === 'reflexology'
+                    ? 'bg-primary text-primary-foreground shadow-lg'
+                    : 'bg-card text-foreground hover:bg-accent/50 border border-border'
+                }`}
+              >
+                <Footprints className="w-5 h-5" />
+                Reflexology
+              </button>
+            </div>
+          </section>
+
+          {/* Yoga Content */}
+          {activeTab === 'yoga' && (
+            <>
+              {/* Class Types */}
+              <section className="mb-16 px-6">
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">
+                  Yoga Styles I Teach
+                </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {classTypes.map((classType, index) => (
+                <Card key={index} className="bg-card hover:bg-accent/20 transition-all duration-300 hover:scale-105 transform">
+                  <CardHeader>
+                    <CardTitle className="text-xl font-bold text-foreground flex items-center gap-2">
+                      <Star className="w-5 h-5 text-primary" />
+                      {classType.name}
+                    </CardTitle>
+                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        {classType.duration}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Users className="w-4 h-4" />
+                        {classType.level}
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-4 leading-relaxed">
+                      {classType.description}
+                    </p>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Benefits:</h4>
+                      <ul className="space-y-1">
+                        {classType.benefits.map((benefit, idx) => (
+                          <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+
+          {/* Weekly Schedule */}
+          <section className="mb-16 px-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">
+              Weekly Class Schedule
+            </h2>
+            <div className="grid gap-4 max-w-4xl mx-auto">
+              {locations.map((location, index) => (
+                <Card key={index} className="bg-card border-border hover:bg-accent/20 transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          <MapPin className="w-4 h-4 text-primary" />
+                          <h3 className="font-semibold text-foreground">{location.name}</h3>
+                        </div>
+                        <p className="text-muted-foreground text-sm mb-2">{location.address}</p>
+                        <div className="flex items-center gap-4 text-sm">
+                          <div className="flex items-center gap-1">
+                            <Calendar className="w-4 h-4 text-primary" />
+                            {location.day}
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <Clock className="w-4 h-4 text-primary" />
+                            {location.time}
+                          </div>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className="font-medium text-foreground mb-1">{location.type}</div>
+                        {location.zoom && (
+                          <div className="text-xs text-primary bg-primary/10 px-2 py-1 rounded-full inline-block">
+                            + Zoom option
+                          </div>
+                        )}
+                        {location.weather && (
+                          <div className="text-xs text-muted-foreground">
+                            {location.weather}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+
+          {/* Special Sessions */}
+          <section className="mb-16 px-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">
+              Special Sessions
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {specialSessions.map((session, index) => (
+                <Card key={index} className="bg-primary text-primary-foreground">
+                  <CardHeader>
+                    <CardTitle className="text-xl font-bold">{session.name}</CardTitle>
+                    <div className="flex items-center gap-2 text-primary-foreground/80">
+                      <MapPin className="w-4 h-4" />
+                      {session.location}
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-primary-foreground/90 mb-4 leading-relaxed">
+                      {session.description}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <div className="text-sm text-primary-foreground/80">
+                        Duration: {session.duration}
+                      </div>
+                      <div className="font-semibold">
+                        {session.price}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+
+          {/* Pricing */}
+          <section className="mb-16 px-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">
+              Pricing & Booking
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <Card className="bg-card">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-foreground">Monthly Pass</CardTitle>
+                  <div className="text-3xl font-bold text-primary">£48</div>
+                  <p className="text-muted-foreground">per calendar month</p>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                      <span className="text-foreground">Unlimited entry to regular classes</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                      <span className="text-foreground">All locations included</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                      <span className="text-foreground">Zoom access when available</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                      <span className="text-foreground">Perfect for regular practitioners</span>
+                    </li>
+                  </ul>
+                  <div className="text-sm text-muted-foreground">
+                    * Excludes Monthly Yin Yoga & Sound Bath (£10)
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-foreground">Drop-in Classes</CardTitle>
+                  <div className="text-3xl font-bold text-primary">Pay per class</div>
+                  <p className="text-muted-foreground">flexible option</p>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                      <span className="text-foreground">Pay for individual classes</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                      <span className="text-foreground">Try before committing</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                      <span className="text-foreground">Perfect for beginners</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                      <span className="text-foreground">No long-term commitment</span>
+                    </li>
+                  </ul>
+                  <div className="text-sm text-muted-foreground">
+                    Contact me for current drop-in rates
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
+
+              {/* Booking CTA */}
+              <section className="text-center px-6">
+                <div className="bg-gradient-to-br from-wellness-green-100 to-wellness-cream-100 rounded-2xl p-8 max-w-2xl mx-auto">
+                  <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                    Ready to Start Your Yoga Journey?
+                  </h2>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Book your first class today and experience the benefits of yoga in a supportive, nurturing environment.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a 
+                      href="https://bookwhen.com/yoga71withange" 
+                      className="bg-primary text-primary-foreground px-8 py-4 rounded-full hover:bg-primary/90 transition-all duration-300 font-medium text-lg hover:scale-105 transform"
+                    >
+                      Book Your Class
+                    </a>
+                    <a 
+                      href="tel:07814487281" 
+                      className="border-2 border-primary text-primary px-8 py-4 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-medium text-lg hover:scale-105 transform"
+                    >
+                      Call 07814 487281
+                    </a>
+                  </div>
+                </div>
+              </section>
+            </>
+          )}
+
+          {/* Reflexology Content */}
+          {activeTab === 'reflexology' && (
+            <>
+              {/* Reflexology Overview */}
+              <section className="mb-16 px-6">
+                <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                  <div className="space-y-6">
+                    <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
+                      Aromatherapy Reflexology
+                    </h2>
+                    <p className="text-lg text-muted-foreground leading-relaxed">
+                      {reflexologyInfo.description}
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {reflexologyInfo.details}
+                    </p>
+                  </div>
+                  <div className="relative">
+                    <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                      <img 
+                        src="/reflexology-photo.png"
+                        alt="Reflexology treatment in peaceful Irvine studio"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="absolute -top-4 -right-4 w-8 h-8 bg-wellness-green-300 rounded-full opacity-60"></div>
+                    <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-wellness-cream-300 rounded-full opacity-40"></div>
+                  </div>
+                </div>
+              </section>
+
+              {/* Benefits */}
+              <section className="mb-16 px-6">
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">
+                  Benefits of Reflexology
+                </h2>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                  {reflexologyInfo.benefits.map((benefit, index) => (
+                    <Card key={index} className="bg-card hover:bg-accent/20 transition-all duration-300 hover:scale-105 transform">
+                      <CardContent className="p-6 text-center">
+                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <Footprints className="w-6 h-6 text-primary" />
+                        </div>
+                        <h3 className="font-semibold text-foreground">{benefit}</h3>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </section>
+
+              {/* Availability & Pricing */}
+              <section className="mb-16 px-6">
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">
+                  Availability & Pricing
+                </h2>
+                <div className="max-w-2xl mx-auto">
+                  <Card className="bg-primary text-primary-foreground">
+                    <CardHeader>
+                      <CardTitle className="text-2xl font-bold text-center">Reflexology Sessions</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-6">
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div>
+                          <h3 className="font-semibold mb-3 flex items-center gap-2">
+                            <Calendar className="w-5 h-5" />
+                            Availability
+                          </h3>
+                          <ul className="space-y-2 text-primary-foreground/90">
+                            <li>• {reflexologyInfo.availability.days}</li>
+                            <li>• {reflexologyInfo.availability.times}</li>
+                            <li>• {reflexologyInfo.availability.location}</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h3 className="font-semibold mb-3 flex items-center gap-2">
+                            <Clock className="w-5 h-5" />
+                            Session Details
+                          </h3>
+                          <ul className="space-y-2 text-primary-foreground/90">
+                            <li>• 60-minute sessions</li>
+                            <li>• Aromatherapy included</li>
+                            <li>• Gentle, non-invasive</li>
+                            <li>• All levels welcome</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className="text-center pt-4 border-t border-primary-foreground/20">
+                        <div className="text-3xl font-bold mb-2">{reflexologyInfo.availability.price}</div>
+                        <p className="text-primary-foreground/80">per session</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </section>
+
+              {/* Booking CTA */}
+              <section className="text-center px-6">
+                <div className="bg-gradient-to-br from-wellness-green-100 to-wellness-cream-100 rounded-2xl p-8 max-w-2xl mx-auto">
+                  <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                    Ready to Experience Reflexology?
+                  </h2>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Book your reflexology treatment today and discover the natural healing benefits in my peaceful Irvine studio.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a 
+                      href="/#contact" 
+                      className="bg-primary text-primary-foreground px-8 py-4 rounded-full hover:bg-primary/90 transition-all duration-300 font-medium text-lg hover:scale-105 transform"
+                    >
+                      Book Treatment
+                    </a>
+                    <a 
+                      href="tel:07814487281" 
+                      className="border-2 border-primary text-primary px-8 py-4 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-medium text-lg hover:scale-105 transform"
+                    >
+                      Call 07814 487281
+                    </a>
+                  </div>
+                </div>
+              </section>
+            </>
+          )}
+        </main>
+      </div>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default ClassesBooking;
