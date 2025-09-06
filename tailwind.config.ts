@@ -22,6 +22,7 @@ export default {
 			fontFamily: {
 				'instrument': ['Instrument Sans', 'sans-serif'],
 				'playfair': ['Playfair Display', 'serif'],
+				'rocaone': ['RocaOne', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

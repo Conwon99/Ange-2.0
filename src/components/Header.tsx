@@ -14,8 +14,12 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-2xl font-normal text-primary">
-            Holistics71
+          <div className="flex items-center">
+            <img 
+              src="/logo-purp.png" 
+              alt="Holistics71 with Ange" 
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -41,7 +45,7 @@ const Header = () => {
             <a href="/#contact" className="text-foreground hover:text-primary transition-colors duration-200">
               Contact
             </a>
-            <a href="https://bookwhen.com/yoga71withange" className="bg-primary text-primary-foreground px-6 py-2 rounded-full hover:bg-primary/90 transition-colors duration-200 font-medium">
+            <a href="https://bookwhen.com/yoga71withange" className="text-white px-6 py-2 rounded-full transition-colors duration-200 font-medium" style={{backgroundColor: '#7756a5'}} onMouseEnter={(e) => e.target.style.backgroundColor = '#6a4a8f'} onMouseLeave={(e) => e.target.style.backgroundColor = '#7756a5'}>
               Book Now
             </a>
           </nav>
@@ -108,7 +112,7 @@ const Header = () => {
               >
                 Contact
               </a>
-              <a href="https://bookwhen.com/yoga71withange" className="bg-primary text-primary-foreground px-6 py-2 rounded-full hover:bg-primary/90 transition-colors duration-200 font-medium text-left">
+              <a href="https://bookwhen.com/yoga71withange" className="text-white px-6 py-2 rounded-full transition-colors duration-200 font-medium text-left" style={{backgroundColor: '#7756a5'}} onMouseEnter={(e) => e.target.style.backgroundColor = '#6a4a8f'} onMouseLeave={(e) => e.target.style.backgroundColor = '#7756a5'}>
                 Book Now
               </a>
             </div>

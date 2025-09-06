@@ -3,49 +3,56 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'RocaOne';
+  src: url('/fonts/RocaOne-Rg.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 77 25% 85%;
+    --background: 0 0% 100%;
     --foreground: 150 25% 15%;
 
-    --card: 77 25% 88%;
+    --card: 0 0% 100%;
     --card-foreground: 150 25% 15%;
 
-    --popover: 77 25% 88%;
+    --popover: 0 0% 100%;
     --popover-foreground: 150 25% 15%;
 
     --primary: 135 60% 20%;
     --primary-foreground: 45 15% 97%;
 
-    --secondary: 45 25% 90%;
+    --secondary: 0 0% 96%;
     --secondary-foreground: 150 25% 15%;
 
-    --muted: 45 25% 92%;
+    --muted: 0 0% 96%;
     --muted-foreground: 150 15% 45%;
 
-    --accent: 135 40% 85%;
+    --accent: 0 0% 96%;
     --accent-foreground: 150 25% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 45 25% 88%;
-    --input: 45 25% 88%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
     --ring: 135 60% 20%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 77 25% 88%;
+    --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 150 25% 15%;
     --sidebar-primary: 135 60% 20%;
     --sidebar-primary-foreground: 45 15% 97%;
-    --sidebar-accent: 45 25% 92%;
+    --sidebar-accent: 0 0% 96%;
     --sidebar-accent-foreground: 150 25% 15%;
-    --sidebar-border: 45 25% 88%;
+    --sidebar-border: 0 0% 90%;
     --sidebar-ring: 135 60% 20%;
   }
 
