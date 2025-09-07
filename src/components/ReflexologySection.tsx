@@ -9,7 +9,7 @@ const ReflexologySection = () => {
           {/* Left side - Content */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6">
+              <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone">
                 Reflexology Treatments
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed mb-6">

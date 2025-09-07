@@ -25,7 +25,7 @@ const ScheduleSection = () => {
           {/* Right side - Content */}
           <div className="order-1 lg:order-2 space-y-8">
             <div>
-              <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6">
+              <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone">
                 Yoga Classes
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed mb-6">

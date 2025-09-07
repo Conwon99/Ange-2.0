@@ -7,7 +7,7 @@ const TeamSection = () => {
     <section className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-6">
         <div className="mb-16">
-          <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6">
+          <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone">
             About Ange
           </h2>
         </div>

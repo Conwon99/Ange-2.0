@@ -77,7 +77,7 @@ const ContactSection = () => {
           {/* Right side - Contact form */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6">
+              <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone">
                 Get in touch.
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">

@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+    <header className="bg-transparent backdrop-blur-sm border-b border-border fixed top-0 left-0 right-0 z-50" style={{ margin: 0 }}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -24,25 +24,25 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-foreground hover:text-primary transition-colors duration-200">
+            <a href="/" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               Home
             </a>
-            <a href="/#about" className="text-foreground hover:text-primary transition-colors duration-200">
+            <a href="/#about" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               About
             </a>
-            <a href="/classes-booking" className="text-foreground hover:text-primary transition-colors duration-200">
+            <a href="/classes-booking" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               Classes & Booking
             </a>
-            <a href="/#products" className="text-foreground hover:text-primary transition-colors duration-200">
+            <a href="/#products" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               Products
             </a>
-            <a href="/#testimonials" className="text-foreground hover:text-primary transition-colors duration-200">
+            <a href="/#testimonials" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               Testimonials
             </a>
-            <a href="/#faq" className="text-foreground hover:text-primary transition-colors duration-200">
+            <a href="/#faq" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               FAQs
             </a>
-            <a href="/#contact" className="text-foreground hover:text-primary transition-colors duration-200">
+            <a href="/#contact" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               Contact
             </a>
             <a href="https://bookwhen.com/yoga71withange" className="text-white px-6 py-2 rounded-full transition-colors duration-200 font-medium" style={{backgroundColor: '#7756a5'}} onMouseEnter={(e) => e.target.style.backgroundColor = '#6a4a8f'} onMouseLeave={(e) => e.target.style.backgroundColor = '#7756a5'}>

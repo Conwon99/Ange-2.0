@@ -16,18 +16,18 @@ import Footer from '../components/Footer';
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-6xl mx-auto">
-        <Header />
-        <main>
-          <HeroSection />
-        </main>
-      </div>
-      
-      {/* Full-width banner */}
-      <StatsSection />
-      
-      <div className="max-w-6xl mx-auto">
-        <main>
+      {/* Full-width fixed header */}
+      <Header />
+
+      {/* Full-width hero section */}
+      <main>
+        <HeroSection />
+
+        {/* Full-width banner */}
+        <StatsSection />
+
+        {/* Constrained content sections */}
+        <div className="max-w-6xl mx-auto">
           <ServicesSection />
           <ScheduleSection />
           <ReflexologySection />
@@ -36,9 +36,9 @@ const Index = () => {
           <PricingSection />
           <ContactSection />
           <FAQSection />
-        </main>
-        <Footer />
-      </div>
+          <Footer />
+        </div>
+      </main>
     </div>
   );
 };

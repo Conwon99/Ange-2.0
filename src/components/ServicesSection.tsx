@@ -25,7 +25,7 @@ const ServicesSection = () => {
     <section id="services" className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-6">
         <div className="mb-16">
-          <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6">
+          <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone">
             My Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
