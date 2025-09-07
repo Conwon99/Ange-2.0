@@ -28,11 +28,8 @@ const ScheduleSection = () => {
               <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone">
                 Yoga Classes
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed mb-6">
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
                 Join me for weekly yoga classes in Troon, Irvine, and Kilwinning. I offer a variety of styles including Hatha, Yin, and Ashtanga yoga, perfect for all levels from beginners to advanced practitioners.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Experience the benefits of regular yoga practice in a supportive, nurturing environment. Each class is designed to help you connect with your body, reduce stress, and improve your overall wellbeing.
               </p>
             </div>
 

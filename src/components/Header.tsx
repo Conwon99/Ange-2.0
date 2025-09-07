@@ -27,7 +27,7 @@ const Header = () => {
             <a href="/" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               Home
             </a>
-            <a href="/#about" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
+            <a href="/about" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               About
             </a>
             <a href="/classes-booking" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
@@ -35,6 +35,9 @@ const Header = () => {
             </a>
             <a href="/#products" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               Products
+            </a>
+            <a href="/pricing" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
+              Pricing
             </a>
             <a href="/#testimonials" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               Testimonials
@@ -71,7 +74,7 @@ const Header = () => {
                 Home
               </a>
               <a 
-                href="/#about" 
+                href="/about" 
                 className="text-foreground hover:text-primary transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -90,6 +93,13 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Products
+              </a>
+              <a 
+                href="/pricing" 
+                className="text-foreground hover:text-primary transition-colors duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Pricing
               </a>
               <a 
                 href="/#testimonials" 

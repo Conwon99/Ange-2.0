@@ -9,33 +9,33 @@ const StatsSection = () => {
           {/* Stats */}
           <div className="text-center">
             <div className="text-5xl lg:text-6xl font-bold mb-2">
-              3.2<span className="text-3xl">K</span>
+              7<span className="text-3xl">+</span>
             </div>
-            <div className="text-lg opacity-90">World champions</div>
+            <div className="text-lg opacity-90">Years Guiding Wellness in Ayrshire</div>
           </div>
 
           <div className="text-center">
             <div className="text-5xl lg:text-6xl font-bold mb-2">
-              1.8<span className="text-3xl">%</span>
+              1.2<span className="text-3xl">K</span>
             </div>
-            <div className="text-lg opacity-90">Runner up champions</div>
+            <div className="text-lg opacity-90">Students Empowered Through Yoga & Reflexology</div>
           </div>
 
           <div className="text-center">
             <div className="text-5xl lg:text-6xl font-bold mb-2">
-              4.5<span className="text-3xl">M</span>
+              3
             </div>
-            <div className="text-lg opacity-90">Sea games participation</div>
+            <div className="text-lg opacity-90">Locations: Troon, Irvine & Kilwinning</div>
           </div>
 
           {/* Text Content */}
           <div className="text-center md:text-left">
             <p className="text-lg mb-4 leading-relaxed">
-              Once we receive your consult request we match you up with a trainer. This is to ensure that your unique goals, needs, and personalities align.
+              Join Ange's holistic wellness community and experience the transformative power of yoga, reflexology, and aromatics. Perfect for beginners and those seeking natural healing.
             </p>
-            <button className="bg-primary text-primary-foreground px-8 py-3 rounded-full hover:bg-primary/90 transition-all duration-300 font-medium">
-              Join Member
-            </button>
+            <a href="https://bookwhen.com/yoga71withange" className="bg-primary text-primary-foreground px-8 py-3 rounded-full hover:bg-primary/90 transition-all duration-300 font-medium inline-block">
+              Book Your Class
+            </a>
           </div>
         </div>
       </div>

@@ -12,11 +12,8 @@ const ReflexologySection = () => {
               <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone">
                 Reflexology Treatments
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed mb-6">
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
                 Experience the healing power of aromatherapy reflexology in my peaceful Irvine studio. These 60-minute treatments focus on your feet to promote natural healing, stress relief, and improved wellbeing.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Reflexology is a gentle, non-invasive therapy that works by applying pressure to specific points on the feet that correspond to different organs and systems in the body. Combined with aromatherapy, it creates a deeply relaxing and therapeutic experience.
               </p>
             </div>
 

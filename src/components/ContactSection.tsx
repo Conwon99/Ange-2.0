@@ -33,7 +33,7 @@ const ContactSection = () => {
               {/* Large image */}
               <div className="col-span-2 aspect-[4/3] rounded-full overflow-hidden">
                 <img 
-                  src="/lovable-uploads/4eafaf1f-4c1d-4224-819d-b62897641804.png"
+                  src="/Contact/MartynT.CainPhotographer-yoga71-11.jpg"
                   alt="Yoga class in session"
                   className="w-full h-full object-cover"
                 />
@@ -42,7 +42,7 @@ const ContactSection = () => {
               {/* Small circular images */}
               <div className="aspect-square rounded-full overflow-hidden">
                 <img 
-                  src="/lovable-uploads/f3ae8157-240d-4998-8153-dcb44abf015c.png"
+                  src="/Contact/MartynT.CainPhotographer-yoga71-64.jpg"
                   alt="Yoga pose"
                   className="w-full h-full object-cover"
                 />
@@ -50,7 +50,7 @@ const ContactSection = () => {
               
               <div className="aspect-square rounded-full overflow-hidden">
                 <img 
-                  src="/lovable-uploads/3e91ddb7-904e-420f-a600-46c29455342e.png"
+                  src="/Contact/MartynT.CainPhotographer-yoga71-68.jpg"
                   alt="Fitness training"
                   className="w-full h-full object-cover"
                 />
@@ -58,7 +58,7 @@ const ContactSection = () => {
               
               <div className="aspect-square rounded-full overflow-hidden">
                 <img 
-                  src="/lovable-uploads/4eafaf1f-4c1d-4224-819d-b62897641804.png"
+                  src="/Contact/MartynT.CainPhotographer-yoga71-68 (1).jpg"
                   alt="Wellness activity"
                   className="w-full h-full object-cover"
                 />
@@ -66,7 +66,7 @@ const ContactSection = () => {
               
               <div className="aspect-square rounded-full overflow-hidden">
                 <img 
-                  src="/lovable-uploads/f3ae8157-240d-4998-8153-dcb44abf015c.png"
+                  src="/Contact/MartynT.CainPhotographer-yoga71-64.jpg"
                   alt="Movement practice"
                   className="w-full h-full object-cover"
                 />

@@ -37,7 +37,7 @@ const TeamSection = () => {
             <div className="bg-gradient-to-br from-wellness-green-100 to-wellness-cream-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform">
               <div className="aspect-[4/5] bg-gradient-to-br from-wellness-green-200 to-wellness-cream-200">
                 <img 
-                  src="/lovable-uploads/f3ae8157-240d-4998-8153-dcb44abf015c.png" 
+                  src="/assetsnew/Landing page small image.jpg" 
                   alt="Ange - 200 YTT qualified yoga teacher" 
                   className="w-full h-full object-cover"
                 />
@@ -61,7 +61,7 @@ const TeamSection = () => {
             <div className="bg-gradient-to-br from-wellness-cream-100 to-wellness-green-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform">
               <div className="aspect-[4/5] bg-gradient-to-br from-wellness-cream-200 to-wellness-green-200">
                 <img 
-                  src="/lovable-uploads/3e91ddb7-904e-420f-a600-46c29455342e.png" 
+                  src="/assetsnew/About Ange.jpg" 
                   alt="Ange's qualifications and training" 
                   className="w-full h-full object-cover"
                 />

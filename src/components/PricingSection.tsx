@@ -7,46 +7,45 @@ import { Check } from 'lucide-react';
 const PricingSection = () => {
   const plans = [
     {
-      name: "Starter Plan",
-      price: "$14",
-      period: "per user, per month",
-      buttonText: "Join Membership",
+      name: "Unlimited Live/Zoom",
+      price: "£48",
+      period: "monthly pass",
+      buttonText: "Book Pass",
       buttonVariant: "outline" as const,
       features: [
-        "8 yoga classes per month",
-        "2 fitness training sessions per month",
-        "Access to online resources",
-        "Monthly wellness newsletter"
+        "Unlimited live classes in Troon, Irvine & Kilwinning",
+        "Unlimited Zoom classes",
+        "All yoga styles included",
+        "Perfect for regular practitioners"
       ],
       cardClass: "bg-card hover:bg-accent/20"
     },
     {
-      name: "Basic plan",
-      price: "$29",
-      period: "per user, per month",
-      buttonText: "Start My 15-day Trial",
+      name: "Drop-in Classes",
+      price: "£9",
+      period: "per class",
+      buttonText: "Book Class",
       buttonVariant: "default" as const,
       features: [
-        "Unlimited yoga classes",
-        "4 fitness training sessions per month",
-        "1 personalized coaching session per month",
-        "Access to online resources",
-        "Monthly wellness newsletter"
+        "£9 for regular classes",
+        "£5 for special offers",
+        "£7 for Beach Yoga",
+        "Perfect for trying out"
       ],
       cardClass: "bg-primary text-primary-foreground",
       featured: true
     },
     {
-      name: "Premium plan",
-      price: "$139",
-      period: "per user, per month",
-      buttonText: "Join Membership",
+      name: "Unlimited Zoom-Only",
+      price: "£25",
+      period: "monthly pass",
+      buttonText: "Book Pass",
       buttonVariant: "outline" as const,
       features: [
-        "4 personalized coaching sessions per month",
-        "Customized fitness and yoga plans",
-        "Access to online resources",
-        "Monthly wellness newsletter"
+        "Unlimited Zoom classes only",
+        "All yoga styles included",
+        "Perfect for home practice",
+        "Great value for online sessions"
       ],
       cardClass: "bg-card hover:bg-accent/20"
     }
@@ -60,14 +59,14 @@ const PricingSection = () => {
             Transform{' '}
             <span className="font-playfair italic text-wellness-green-600">Your</span>
             <br />
-            <span className="font-playfair italic text-wellness-green-600">Body</span>{' '}
-            and Mind
+            <span className="font-playfair italic text-wellness-green-600">Wellness</span>{' '}
+            Journey
           </h2>
           <p className="text-lg lg:text-xl text-muted-foreground italic mb-8">
-            sweat classes
+            holistic healing
           </p>
           <p className="text-base text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            If you're looking to supplement your current fitness routine with small group training or just want to join a few classes a month then take a look at our class pass options below.
+            Choose the perfect wellness package for your journey. All prices include personalized attention and holistic healing approaches from Ange's 7+ years of experience in Ayrshire.
           </p>
         </div>
 
@@ -100,16 +99,16 @@ const PricingSection = () => {
               </CardHeader>
 
               <CardContent className="space-y-6">
-                <Button 
-                  variant={plan.featured ? "secondary" : plan.buttonVariant}
-                  className={`w-full py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 ${
+                <a 
+                  href={plan.name === "Yoga Classes" ? "https://bookwhen.com/yoga71withange" : "/#contact"}
+                  className={`w-full py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center ${
                     plan.featured 
                       ? 'bg-background text-foreground hover:bg-background/90 border border-foreground/20' 
                       : 'bg-background text-foreground hover:bg-background/90 border border-foreground/20'
                   }`}
                 >
                   {plan.buttonText}
-                </Button>
+                </a>
 
                 <ul className="space-y-4">
                   {plan.features.map((feature, featureIndex) => (
