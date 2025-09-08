@@ -48,7 +48,9 @@ const ServicesSection = () => {
                 <img 
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 ${
+                    service.title === "Reflexology Treatments" ? "object-center scale-150" : ""
+                  }`}
                 />
               </div>
               

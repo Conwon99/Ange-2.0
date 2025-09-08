@@ -140,8 +140,8 @@ const ClassesBooking = () => {
                 onClick={() => setActiveTab('yoga')}
                 className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   activeTab === 'yoga'
-                    ? 'bg-primary text-primary-foreground shadow-lg'
-                    : 'bg-card text-foreground hover:bg-accent/50 border border-border'
+                    ? 'bg-purple-600 text-white shadow-lg'
+                    : 'bg-purple-100/80 text-foreground hover:bg-purple-200/80 border border-purple-200'
                 }`}
               >
                 <Star className="w-5 h-5" />
@@ -151,8 +151,8 @@ const ClassesBooking = () => {
                 onClick={() => setActiveTab('reflexology')}
                 className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   activeTab === 'reflexology'
-                    ? 'bg-primary text-primary-foreground shadow-lg'
-                    : 'bg-card text-foreground hover:bg-accent/50 border border-border'
+                    ? 'bg-purple-600 text-white shadow-lg'
+                    : 'bg-purple-100/80 text-foreground hover:bg-purple-200/80 border border-purple-200'
                 }`}
               >
                 <Footprints className="w-5 h-5" />
@@ -171,10 +171,10 @@ const ClassesBooking = () => {
                 </h2>
             <div className="grid md:grid-cols-3 gap-8">
               {classTypes.map((classType, index) => (
-                <Card key={index} className="bg-card hover:bg-accent/20 transition-all duration-300 hover:scale-105 transform">
+                <Card key={index} className="bg-purple-100/80 backdrop-blur-sm hover:bg-purple-200/80 transition-all duration-300 hover:scale-105 transform">
                   <CardHeader>
                     <CardTitle className="text-xl font-bold text-foreground flex items-center gap-2">
-                      <Star className="w-5 h-5 text-primary" />
+                      <Star className="w-5 h-5 text-purple-600" />
                       {classType.name}
                     </CardTitle>
                     <div className="flex items-center gap-4 text-sm text-muted-foreground">
@@ -197,7 +197,7 @@ const ClassesBooking = () => {
                       <ul className="space-y-1">
                         {classType.benefits.map((benefit, idx) => (
                           <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                            <div className="w-1.5 h-1.5 bg-purple-600 rounded-full"></div>
                             {benefit}
                           </li>
                         ))}
@@ -216,22 +216,22 @@ const ClassesBooking = () => {
             </h2>
             <div className="grid gap-4 max-w-4xl mx-auto">
               {locations.map((location, index) => (
-                <Card key={index} className="bg-card border-border hover:bg-accent/20 transition-all duration-300">
+                <Card key={index} className="bg-purple-100/80 backdrop-blur-sm border-purple-200 hover:bg-purple-200/80 transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-2">
-                          <MapPin className="w-4 h-4 text-primary" />
+                          <MapPin className="w-4 h-4 text-purple-600" />
                           <h3 className="font-semibold text-foreground">{location.name}</h3>
                         </div>
                         <p className="text-muted-foreground text-sm mb-2">{location.address}</p>
                         <div className="flex items-center gap-4 text-sm">
                           <div className="flex items-center gap-1">
-                            <Calendar className="w-4 h-4 text-primary" />
+                            <Calendar className="w-4 h-4 text-purple-600" />
                             {location.day}
                           </div>
                           <div className="flex items-center gap-1">
-                            <Clock className="w-4 h-4 text-primary" />
+                            <Clock className="w-4 h-4 text-purple-600" />
                             {location.time}
                           </div>
                         </div>
@@ -239,7 +239,7 @@ const ClassesBooking = () => {
                       <div className="text-right">
                         <div className="font-medium text-foreground mb-1">{location.type}</div>
                         {location.zoom && (
-                          <div className="text-xs text-primary bg-primary/10 px-2 py-1 rounded-full inline-block">
+                          <div className="text-xs text-purple-600 bg-purple-100 px-2 py-1 rounded-full inline-block">
                             + Zoom option
                           </div>
                         )}
@@ -263,20 +263,20 @@ const ClassesBooking = () => {
             </h2>
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {specialSessions.map((session, index) => (
-                <Card key={index} className="bg-primary text-primary-foreground">
+                <Card key={index} className="bg-purple-600 text-white">
                   <CardHeader>
                     <CardTitle className="text-xl font-bold">{session.name}</CardTitle>
-                    <div className="flex items-center gap-2 text-primary-foreground/80">
+                    <div className="flex items-center gap-2 text-white/80">
                       <MapPin className="w-4 h-4" />
                       {session.location}
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-primary-foreground/90 mb-4 leading-relaxed">
+                    <p className="text-white/90 mb-4 leading-relaxed">
                       {session.description}
                     </p>
                     <div className="flex items-center justify-between">
-                      <div className="text-sm text-primary-foreground/80">
+                      <div className="text-sm text-white/80">
                         Duration: {session.duration}
                       </div>
                       <div className="font-semibold">
@@ -471,13 +471,13 @@ const ClassesBooking = () => {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a 
                       href="https://bookwhen.com/yoga71withange/passes" 
-                      className="bg-primary text-primary-foreground px-8 py-4 rounded-full hover:bg-primary/90 transition-all duration-300 font-medium text-lg hover:scale-105 transform"
+                      className="bg-purple-600 text-white px-8 py-4 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium text-lg hover:scale-105 transform"
                     >
                       Book Your Class
                     </a>
                     <a 
                       href="tel:07814487281" 
-                      className="border-2 border-primary text-primary px-8 py-4 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-medium text-lg hover:scale-105 transform"
+                      className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full hover:bg-purple-600 hover:text-white transition-all duration-300 font-medium text-lg hover:scale-105 transform"
                     >
                       Call 07814 487281
                     </a>
@@ -525,10 +525,10 @@ const ClassesBooking = () => {
                 </h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
                   {reflexologyInfo.benefits.map((benefit, index) => (
-                    <Card key={index} className="bg-card hover:bg-accent/20 transition-all duration-300 hover:scale-105 transform">
+                    <Card key={index} className="bg-purple-100/80 backdrop-blur-sm hover:bg-purple-200/80 transition-all duration-300 hover:scale-105 transform">
                       <CardContent className="p-6 text-center">
-                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <Footprints className="w-6 h-6 text-primary" />
+                        <div className="w-12 h-12 bg-purple-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <Footprints className="w-6 h-6 text-purple-600" />
                         </div>
                         <h3 className="font-semibold text-foreground">{benefit}</h3>
                       </CardContent>
@@ -543,7 +543,7 @@ const ClassesBooking = () => {
                   Availability & Pricing
                 </h2>
                 <div className="max-w-2xl mx-auto">
-                  <Card className="bg-primary text-primary-foreground">
+                  <Card className="bg-purple-600 text-white">
                     <CardHeader>
                       <CardTitle className="text-2xl font-bold text-center">Reflexology Sessions</CardTitle>
                     </CardHeader>
@@ -554,7 +554,7 @@ const ClassesBooking = () => {
                             <Calendar className="w-5 h-5" />
                             Availability
                           </h3>
-                          <ul className="space-y-2 text-primary-foreground/90">
+                          <ul className="space-y-2 text-white/90">
                             <li>• {reflexologyInfo.availability.days}</li>
                             <li>• {reflexologyInfo.availability.times}</li>
                             <li>• {reflexologyInfo.availability.location}</li>
@@ -565,7 +565,7 @@ const ClassesBooking = () => {
                             <Clock className="w-5 h-5" />
                             Session Details
                           </h3>
-                          <ul className="space-y-2 text-primary-foreground/90">
+                          <ul className="space-y-2 text-white/90">
                             <li>• 60-minute sessions</li>
                             <li>• Aromatherapy included</li>
                             <li>• Gentle, non-invasive</li>
@@ -573,9 +573,9 @@ const ClassesBooking = () => {
                           </ul>
                         </div>
                       </div>
-                      <div className="text-center pt-4 border-t border-primary-foreground/20">
+                      <div className="text-center pt-4 border-t border-white/20">
                         <div className="text-3xl font-bold mb-2">{reflexologyInfo.availability.price}</div>
-                        <p className="text-primary-foreground/80">per session</p>
+                        <p className="text-white/80">per session</p>
                       </div>
                     </CardContent>
                   </Card>
@@ -594,13 +594,13 @@ const ClassesBooking = () => {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a 
                       href="/#contact" 
-                      className="bg-primary text-primary-foreground px-8 py-4 rounded-full hover:bg-primary/90 transition-all duration-300 font-medium text-lg hover:scale-105 transform"
+                      className="bg-purple-600 text-white px-8 py-4 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium text-lg hover:scale-105 transform"
                     >
                       Book Treatment
                     </a>
                     <a 
                       href="tel:07814487281" 
-                      className="border-2 border-primary text-primary px-8 py-4 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-medium text-lg hover:scale-105 transform"
+                      className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full hover:bg-purple-600 hover:text-white transition-all duration-300 font-medium text-lg hover:scale-105 transform"
                     >
                       Call 07814 487281
                     </a>
