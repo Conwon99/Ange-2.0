@@ -41,7 +41,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="group rounded-2xl bg-card hover:bg-accent/50 transition-all duration-300 hover:scale-105 transform hover:shadow-lg overflow-hidden flex flex-col"
+              className="group rounded-2xl bg-purple-100/80 backdrop-blur-sm hover:bg-purple-200/80 transition-all duration-300 hover:scale-105 transform hover:shadow-lg overflow-hidden flex flex-col"
             >
               {/* Image section - top half */}
               <div className="aspect-[4/3] overflow-hidden">

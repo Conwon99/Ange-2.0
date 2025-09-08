@@ -52,14 +52,14 @@ const PricingSection = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-background">
+    <section id="pricing" className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
             <span className="font-rocaone-light">Transform</span>{' '}
-            <span className="italic font-playfair text-purple-600">Your</span>
+            <span className="italic font-playfair text-foreground">Your</span>
             <br />
-            <span className="italic font-playfair text-purple-600">Wellness</span>{' '}
+            <span className="italic font-playfair text-foreground">Wellness</span>{' '}
             <span className="font-rocaone-light">Journey</span>
           </h2>
           <p className="text-lg lg:text-xl text-muted-foreground italic mb-8">
@@ -74,25 +74,25 @@ const PricingSection = () => {
           {plans.map((plan, index) => (
             <Card 
               key={index}
-              className={`${plan.cardClass} border-0 p-8 transition-all duration-300 hover:scale-105 ${
+              className={`${plan.featured ? 'bg-purple-600 text-white' : 'bg-purple-100/80 backdrop-blur-sm'} border-0 p-8 transition-all duration-300 hover:scale-105 ${
                 plan.featured ? 'transform scale-105' : ''
               }`}
             >
               <CardHeader className="text-center pb-8">
                 <CardTitle className={`text-2xl font-medium mb-4 ${
-                  plan.featured ? 'text-primary-foreground' : 'text-foreground'
+                  plan.featured ? 'text-white' : 'text-foreground'
                 }`}>
                   {plan.name}
                 </CardTitle>
                 <div className="mb-4">
                   <span className={`text-5xl lg:text-6xl font-bold tracking-tight ${
-                    plan.featured ? 'text-primary-foreground' : 'text-foreground'
+                    plan.featured ? 'text-white' : 'text-foreground'
                   }`}>
                     {plan.price}
                   </span>
                 </div>
                 <p className={`text-sm ${
-                  plan.featured ? 'text-primary-foreground/80' : 'text-muted-foreground'
+                  plan.featured ? 'text-white/80' : 'text-muted-foreground'
                 }`}>
                   {plan.period}
                 </p>
@@ -103,8 +103,8 @@ const PricingSection = () => {
                   href={plan.name === "Yoga Classes" ? "https://bookwhen.com/yoga71withange" : "/#contact"}
                   className={`w-full py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center ${
                     plan.featured 
-                      ? 'bg-background text-foreground hover:bg-background/90 border border-foreground/20' 
-                      : 'bg-background text-foreground hover:bg-background/90 border border-foreground/20'
+                      ? 'bg-white text-purple-600 hover:bg-white/90 border border-white/20' 
+                      : 'bg-purple-600 text-white hover:bg-purple-700 border border-purple-600'
                   }`}
                 >
                   {plan.buttonText}
@@ -114,10 +114,10 @@ const PricingSection = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start gap-3">
                       <Check className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
-                        plan.featured ? 'text-primary-foreground' : 'text-primary'
+                        plan.featured ? 'text-white' : 'text-purple-600'
                       }`} />
                       <span className={`text-sm leading-relaxed ${
-                        plan.featured ? 'text-primary-foreground/90' : 'text-foreground'
+                        plan.featured ? 'text-white/90' : 'text-foreground'
                       }`}>
                         {feature}
                       </span>

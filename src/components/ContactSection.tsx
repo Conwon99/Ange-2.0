@@ -79,7 +79,7 @@ const ContactSection = () => {
             <div>
               <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
                 <span className="font-rocaone-light">Get in</span>{' '}
-                <span className="italic font-playfair text-purple-600">touch.</span>
+                <span className="italic font-playfair text-foreground">touch.</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 Ready to start your wellness journey? Contact me to book a yoga class, reflexology treatment, or learn more about my aromatics products. I'm here to support your holistic healing.

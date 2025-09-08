@@ -301,7 +301,7 @@ const ClassesBooking = () => {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
-              <Card className="bg-card hover:bg-accent/20 border-0 p-8 transition-all duration-300 hover:scale-105">
+              <Card className="bg-purple-100/80 backdrop-blur-sm hover:bg-purple-200/80 border-0 p-8 transition-all duration-300 hover:scale-105">
                 <CardHeader className="text-center pb-8">
                   <CardTitle className="text-2xl font-medium mb-4 text-foreground">
                     Unlimited Live/Zoom
@@ -319,32 +319,32 @@ const ClassesBooking = () => {
                 <CardContent className="space-y-6">
                   <a 
                     href="https://bookwhen.com/yoga71withange/passes"
-                    className="w-full py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center bg-background text-foreground hover:bg-background/90 border border-foreground/20"
+                    className="w-full py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center bg-purple-600 text-white hover:bg-purple-700"
                   >
                     Book Pass
                   </a>
 
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-600" />
                       <span className="text-sm leading-relaxed text-foreground">
                         Unlimited live classes in Troon, Irvine & Kilwinning
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-600" />
                       <span className="text-sm leading-relaxed text-foreground">
                         Unlimited Zoom classes
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-600" />
                       <span className="text-sm leading-relaxed text-foreground">
                         All yoga styles included
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-600" />
                       <span className="text-sm leading-relaxed text-foreground">
                         Perfect for regular practitioners
                       </span>
@@ -353,17 +353,17 @@ const ClassesBooking = () => {
                 </CardContent>
               </Card>
 
-              <Card className="bg-primary text-primary-foreground border-0 p-8 transition-all duration-300 hover:scale-105 transform scale-105">
+              <Card className="bg-purple-600 text-white border-0 p-8 transition-all duration-300 hover:scale-105 transform scale-105">
                 <CardHeader className="text-center pb-8">
-                  <CardTitle className="text-2xl font-medium mb-4 text-primary-foreground">
+                  <CardTitle className="text-2xl font-medium mb-4 text-white">
                     Drop-in Classes
                   </CardTitle>
                   <div className="mb-4">
-                    <span className="text-5xl lg:text-6xl font-bold tracking-tight text-primary-foreground">
+                    <span className="text-5xl lg:text-6xl font-bold tracking-tight text-white">
                       £9
                     </span>
                   </div>
-                  <p className="text-sm text-primary-foreground/80">
+                  <p className="text-sm text-white/80">
                     per class
                   </p>
                 </CardHeader>
@@ -371,33 +371,33 @@ const ClassesBooking = () => {
                 <CardContent className="space-y-6">
                   <a 
                     href="https://bookwhen.com/yoga71withange/passes"
-                    className="w-full py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center bg-background text-foreground hover:bg-background/90 border border-foreground/20"
+                    className="w-full py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center bg-white text-purple-600 hover:bg-white/90"
                   >
                     Book Class
                   </a>
 
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary-foreground" />
-                      <span className="text-sm leading-relaxed text-primary-foreground/90">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-white" />
+                      <span className="text-sm leading-relaxed text-white/90">
                         £9 for regular classes
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary-foreground" />
-                      <span className="text-sm leading-relaxed text-primary-foreground/90">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-white" />
+                      <span className="text-sm leading-relaxed text-white/90">
                         £5 for special offers
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary-foreground" />
-                      <span className="text-sm leading-relaxed text-primary-foreground/90">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-white" />
+                      <span className="text-sm leading-relaxed text-white/90">
                         £7 for Beach Yoga
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary-foreground" />
-                      <span className="text-sm leading-relaxed text-primary-foreground/90">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-white" />
+                      <span className="text-sm leading-relaxed text-white/90">
                         Perfect for trying out
                       </span>
                     </li>
@@ -405,7 +405,7 @@ const ClassesBooking = () => {
                 </CardContent>
               </Card>
 
-              <Card className="bg-card hover:bg-accent/20 border-0 p-8 transition-all duration-300 hover:scale-105">
+              <Card className="bg-purple-100/80 backdrop-blur-sm hover:bg-purple-200/80 border-0 p-8 transition-all duration-300 hover:scale-105">
                 <CardHeader className="text-center pb-8">
                   <CardTitle className="text-2xl font-medium mb-4 text-foreground">
                     Unlimited Zoom-Only
@@ -423,32 +423,32 @@ const ClassesBooking = () => {
                 <CardContent className="space-y-6">
                   <a 
                     href="https://bookwhen.com/yoga71withange/passes"
-                    className="w-full py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center bg-background text-foreground hover:bg-background/90 border border-foreground/20"
+                    className="w-full py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center bg-purple-600 text-white hover:bg-purple-700"
                   >
                     Book Pass
                   </a>
 
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-600" />
                       <span className="text-sm leading-relaxed text-foreground">
                         Unlimited Zoom classes only
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-600" />
                       <span className="text-sm leading-relaxed text-foreground">
                         All yoga styles included
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-600" />
                       <span className="text-sm leading-relaxed text-foreground">
                         Perfect for home practice
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-600" />
                       <span className="text-sm leading-relaxed text-foreground">
                         Great value for online sessions
                       </span>

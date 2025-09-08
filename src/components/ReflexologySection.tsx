@@ -11,7 +11,7 @@ const ReflexologySection = () => {
             <div>
               <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
                 <span className="font-rocaone-light">Reflexology</span>{' '}
-                <span className="italic font-playfair text-purple-600">Treatments</span>
+                <span className="italic font-playfair text-foreground">Treatments</span>
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
                 Experience the healing power of aromatherapy reflexology in my peaceful Irvine studio. These 60-minute treatments focus on your feet to promote natural healing, stress relief, and improved wellbeing.
@@ -33,7 +33,7 @@ const ReflexologySection = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-foreground">£36 per session - natural healing benefits</span>
+                <span className="text-foreground">£40 per session - natural healing benefits</span>
               </div>
             </div>
 
@@ -60,10 +60,10 @@ const ReflexologySection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#contact" className="bg-primary text-primary-foreground px-8 py-4 rounded-full hover:bg-primary/90 transition-all duration-300 font-medium text-lg hover:scale-105 transform text-center">
+              <a href="#contact" className="bg-purple-600 text-white px-8 py-4 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium text-lg hover:scale-105 transform text-center">
                 Book Treatment
               </a>
-              <a href="tel:07814487281" className="border-2 border-primary text-primary px-8 py-4 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-medium text-lg hover:scale-105 transform text-center">
+              <a href="tel:07814487281" className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full hover:bg-purple-600 hover:text-white transition-all duration-300 font-medium text-lg hover:scale-105 transform text-center">
                 Call 07814 487281
               </a>
             </div>

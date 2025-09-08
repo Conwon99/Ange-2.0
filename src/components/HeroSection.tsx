@@ -36,7 +36,7 @@ const HeroSection = () => {
                 <span className="italic font-playfair text-purple-600">with Ange</span>
               </h1>
               
-              <p className="text-lg lg:text-xl text-muted-foreground max-w-lg leading-relaxed">
+              <p className="text-lg lg:text-xl text-foreground max-w-lg leading-relaxed">
                 I'm Ange, a 200 YTT qualified yoga teacher with 7 years experience in Ayrshire. I offer weekly yoga classes in Troon, Irvine and Kilwinning, plus reflexology treatments and aromatics products. Perfect for beginners and those seeking holistic healing.
               </p>
             </div>

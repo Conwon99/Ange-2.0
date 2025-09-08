@@ -22,12 +22,12 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-background">
+    <section id="testimonials" className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
             <span className="font-rocaone-light">What My</span>{' '}
-            <span className="italic font-playfair text-purple-600">Clients Say</span>
+            <span className="italic font-playfair text-foreground">Clients Say</span>
           </h2>
           <p className="text-xl text-foreground mb-2">
             Real experiences from my yoga and reflexology clients
