@@ -10,13 +10,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'RocaOneLight';
+  src: url('/fonts/RocaOne-Lt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 98%;
     --foreground: 150 25% 15%;
 
     --card: 0 0% 100%;

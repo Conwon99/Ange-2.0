@@ -55,12 +55,12 @@ const PricingSection = () => {
     <section className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone">
-            Transform{' '}
-            <span className="font-playfair italic text-wellness-green-600">Your</span>
+          <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
+            <span className="font-rocaone-light">Transform</span>{' '}
+            <span className="italic font-playfair text-purple-600">Your</span>
             <br />
-            <span className="font-playfair italic text-wellness-green-600">Wellness</span>{' '}
-            Journey
+            <span className="italic font-playfair text-purple-600">Wellness</span>{' '}
+            <span className="font-rocaone-light">Journey</span>
           </h2>
           <p className="text-lg lg:text-xl text-muted-foreground italic mb-8">
             holistic healing
@@ -85,7 +85,7 @@ const PricingSection = () => {
                   {plan.name}
                 </CardTitle>
                 <div className="mb-4">
-                  <span className={`text-5xl lg:text-6xl font-bold ${
+                  <span className={`text-5xl lg:text-6xl font-bold tracking-tight ${
                     plan.featured ? 'text-primary-foreground' : 'text-foreground'
                   }`}>
                     {plan.price}

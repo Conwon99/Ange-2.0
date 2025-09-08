@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
-import { Calendar, Clock, MapPin, Users, Star, Footprints } from 'lucide-react';
+import { Calendar, Clock, MapPin, Users, Star, Footprints, Check } from 'lucide-react';
 
 const ClassesBooking = () => {
   const [activeTab, setActiveTab] = useState<'yoga' | 'reflexology'>('yoga');
@@ -92,7 +92,7 @@ const ClassesBooking = () => {
       name: "Beach Yoga Sessions",
       location: "Barassie Beach, Troon",
       description: "Outdoor yoga practice by the sea, weather permitting. A unique experience connecting with nature.",
-      price: "Regular class price",
+      price: "£7",
       duration: "60 minutes"
     }
   ];
@@ -112,7 +112,7 @@ const ClassesBooking = () => {
       days: "Thursdays and Fridays",
       times: "During the day (last appointments at 3:30pm)",
       location: "Irvine studio (in-home)",
-      price: "£36 per session"
+      price: "£40 per session"
     }
   };
 
@@ -124,7 +124,7 @@ const ClassesBooking = () => {
         <main className="py-20">
           {/* Hero Section */}
           <section className="text-center mb-16 px-6">
-            <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tighter">
               Classes & Booking
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
@@ -166,7 +166,7 @@ const ClassesBooking = () => {
             <>
               {/* Class Types */}
               <section className="mb-16 px-6">
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">
+                <h2 className="text-3xl lg:text-4xl font-normal text-foreground mb-8 font-rocaone tracking-tighter">
                   Yoga Styles I Teach
                 </h2>
             <div className="grid md:grid-cols-3 gap-8">
@@ -211,7 +211,7 @@ const ClassesBooking = () => {
 
           {/* Weekly Schedule */}
           <section className="mb-16 px-6">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">
+            <h2 className="text-3xl lg:text-4xl font-normal text-foreground mb-8 text-center font-rocaone tracking-tight">
               Weekly Class Schedule
             </h2>
             <div className="grid gap-4 max-w-4xl mx-auto">
@@ -258,7 +258,7 @@ const ClassesBooking = () => {
 
           {/* Special Sessions */}
           <section className="mb-16 px-6">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">
+            <h2 className="text-3xl lg:text-4xl font-normal text-foreground mb-8 text-center font-rocaone tracking-tight">
               Special Sessions
             </h2>
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -291,69 +291,169 @@ const ClassesBooking = () => {
 
           {/* Pricing */}
           <section className="mb-16 px-6">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">
-              Pricing & Booking
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <Card className="bg-card">
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-foreground">Monthly Pass</CardTitle>
-                  <div className="text-3xl font-bold text-primary">£48</div>
-                  <p className="text-muted-foreground">per calendar month</p>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
+                Pricing
+              </h2>
+              <p className="text-base text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+                Choose the perfect wellness package for your journey. All prices include personalized attention and holistic healing approaches from Ange's 7+ years of experience in Ayrshire.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
+              <Card className="bg-card hover:bg-accent/20 border-0 p-8 transition-all duration-300 hover:scale-105">
+                <CardHeader className="text-center pb-8">
+                  <CardTitle className="text-2xl font-medium mb-4 text-foreground">
+                    Unlimited Live/Zoom
+                  </CardTitle>
+                  <div className="mb-4">
+                    <span className="text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
+                      £48
+                    </span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    monthly pass
+                  </p>
                 </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                      <span className="text-foreground">Unlimited entry to regular classes</span>
+
+                <CardContent className="space-y-6">
+                  <a 
+                    href="https://bookwhen.com/yoga71withange/passes"
+                    className="w-full py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center bg-background text-foreground hover:bg-background/90 border border-foreground/20"
+                  >
+                    Book Pass
+                  </a>
+
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                      <span className="text-sm leading-relaxed text-foreground">
+                        Unlimited live classes in Troon, Irvine & Kilwinning
+                      </span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                      <span className="text-foreground">All locations included</span>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                      <span className="text-sm leading-relaxed text-foreground">
+                        Unlimited Zoom classes
+                      </span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                      <span className="text-foreground">Zoom access when available</span>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                      <span className="text-sm leading-relaxed text-foreground">
+                        All yoga styles included
+                      </span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                      <span className="text-foreground">Perfect for regular practitioners</span>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                      <span className="text-sm leading-relaxed text-foreground">
+                        Perfect for regular practitioners
+                      </span>
                     </li>
                   </ul>
-                  <div className="text-sm text-muted-foreground">
-                    * Excludes Monthly Yin Yoga & Sound Bath (£10)
-                  </div>
                 </CardContent>
               </Card>
 
-              <Card className="bg-card">
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-foreground">Drop-in Classes</CardTitle>
-                  <div className="text-3xl font-bold text-primary">Pay per class</div>
-                  <p className="text-muted-foreground">flexible option</p>
+              <Card className="bg-primary text-primary-foreground border-0 p-8 transition-all duration-300 hover:scale-105 transform scale-105">
+                <CardHeader className="text-center pb-8">
+                  <CardTitle className="text-2xl font-medium mb-4 text-primary-foreground">
+                    Drop-in Classes
+                  </CardTitle>
+                  <div className="mb-4">
+                    <span className="text-5xl lg:text-6xl font-bold tracking-tight text-primary-foreground">
+                      £9
+                    </span>
+                  </div>
+                  <p className="text-sm text-primary-foreground/80">
+                    per class
+                  </p>
                 </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                      <span className="text-foreground">Pay for individual classes</span>
+
+                <CardContent className="space-y-6">
+                  <a 
+                    href="https://bookwhen.com/yoga71withange/passes"
+                    className="w-full py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center bg-background text-foreground hover:bg-background/90 border border-foreground/20"
+                  >
+                    Book Class
+                  </a>
+
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary-foreground" />
+                      <span className="text-sm leading-relaxed text-primary-foreground/90">
+                        £9 for regular classes
+                      </span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                      <span className="text-foreground">Try before committing</span>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary-foreground" />
+                      <span className="text-sm leading-relaxed text-primary-foreground/90">
+                        £5 for special offers
+                      </span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                      <span className="text-foreground">Perfect for beginners</span>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary-foreground" />
+                      <span className="text-sm leading-relaxed text-primary-foreground/90">
+                        £7 for Beach Yoga
+                      </span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                      <span className="text-foreground">No long-term commitment</span>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary-foreground" />
+                      <span className="text-sm leading-relaxed text-primary-foreground/90">
+                        Perfect for trying out
+                      </span>
                     </li>
                   </ul>
-                  <div className="text-sm text-muted-foreground">
-                    Contact me for current drop-in rates
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card hover:bg-accent/20 border-0 p-8 transition-all duration-300 hover:scale-105">
+                <CardHeader className="text-center pb-8">
+                  <CardTitle className="text-2xl font-medium mb-4 text-foreground">
+                    Unlimited Zoom-Only
+                  </CardTitle>
+                  <div className="mb-4">
+                    <span className="text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
+                      £25
+                    </span>
                   </div>
+                  <p className="text-sm text-muted-foreground">
+                    monthly pass
+                  </p>
+                </CardHeader>
+
+                <CardContent className="space-y-6">
+                  <a 
+                    href="https://bookwhen.com/yoga71withange/passes"
+                    className="w-full py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center bg-background text-foreground hover:bg-background/90 border border-foreground/20"
+                  >
+                    Book Pass
+                  </a>
+
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                      <span className="text-sm leading-relaxed text-foreground">
+                        Unlimited Zoom classes only
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                      <span className="text-sm leading-relaxed text-foreground">
+                        All yoga styles included
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                      <span className="text-sm leading-relaxed text-foreground">
+                        Perfect for home practice
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                      <span className="text-sm leading-relaxed text-foreground">
+                        Great value for online sessions
+                      </span>
+                    </li>
+                  </ul>
                 </CardContent>
               </Card>
             </div>
@@ -361,8 +461,8 @@ const ClassesBooking = () => {
 
               {/* Booking CTA */}
               <section className="text-center px-6">
-                <div className="bg-gradient-to-br from-wellness-green-100 to-wellness-cream-100 rounded-2xl p-8 max-w-2xl mx-auto">
-                  <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                <div className="bg-gradient-to-br from-purple-100 to-purple-50 rounded-2xl p-8 max-w-2xl mx-auto">
+                  <h2 className="text-2xl lg:text-3xl font-normal text-foreground mb-4 font-rocaone tracking-tight">
                     Ready to Start Your Yoga Journey?
                   </h2>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -370,7 +470,7 @@ const ClassesBooking = () => {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a 
-                      href="https://bookwhen.com/yoga71withange" 
+                      href="https://bookwhen.com/yoga71withange/passes" 
                       className="bg-primary text-primary-foreground px-8 py-4 rounded-full hover:bg-primary/90 transition-all duration-300 font-medium text-lg hover:scale-105 transform"
                     >
                       Book Your Class
@@ -394,7 +494,7 @@ const ClassesBooking = () => {
               <section className="mb-16 px-6">
                 <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
                   <div className="space-y-6">
-                    <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
+                    <h2 className="text-3xl lg:text-4xl font-normal text-foreground font-rocaone tracking-tight">
                       Aromatherapy Reflexology
                     </h2>
                     <p className="text-lg text-muted-foreground leading-relaxed">
@@ -412,7 +512,7 @@ const ClassesBooking = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="absolute -top-4 -right-4 w-8 h-8 bg-wellness-green-300 rounded-full opacity-60"></div>
+                    <div className="absolute -top-4 -right-4 w-8 h-8 bg-purple-300 rounded-full opacity-60"></div>
                     <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-wellness-cream-300 rounded-full opacity-40"></div>
                   </div>
                 </div>
@@ -420,7 +520,7 @@ const ClassesBooking = () => {
 
               {/* Benefits */}
               <section className="mb-16 px-6">
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">
+                <h2 className="text-3xl lg:text-4xl font-normal text-foreground mb-8 text-center font-rocaone tracking-tight">
                   Benefits of Reflexology
                 </h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -439,7 +539,7 @@ const ClassesBooking = () => {
 
               {/* Availability & Pricing */}
               <section className="mb-16 px-6">
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center">
+                <h2 className="text-3xl lg:text-4xl font-normal text-foreground mb-8 text-center font-rocaone tracking-tight">
                   Availability & Pricing
                 </h2>
                 <div className="max-w-2xl mx-auto">
@@ -484,8 +584,8 @@ const ClassesBooking = () => {
 
               {/* Booking CTA */}
               <section className="text-center px-6">
-                <div className="bg-gradient-to-br from-wellness-green-100 to-wellness-cream-100 rounded-2xl p-8 max-w-2xl mx-auto">
-                  <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                <div className="bg-gradient-to-br from-purple-100 to-purple-50 rounded-2xl p-8 max-w-2xl mx-auto">
+                  <h2 className="text-2xl lg:text-3xl font-normal text-foreground mb-4 font-rocaone tracking-tight">
                     Ready to Experience Reflexology?
                   </h2>
                   <p className="text-muted-foreground mb-6 leading-relaxed">

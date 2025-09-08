@@ -3,26 +3,26 @@ import React from 'react';
 
 const StatsSection = () => {
   return (
-    <section className="bg-wellness-green-800 text-white py-16">
+    <section className="bg-purple-800 text-white py-16">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-center">
           {/* Stats */}
           <div className="text-center">
-            <div className="text-5xl lg:text-6xl font-bold mb-2">
+            <div className="text-5xl lg:text-6xl font-bold mb-2 tracking-tight">
               7<span className="text-3xl">+</span>
             </div>
             <div className="text-lg opacity-90">Years Guiding Wellness in Ayrshire</div>
           </div>
 
           <div className="text-center">
-            <div className="text-5xl lg:text-6xl font-bold mb-2">
+            <div className="text-5xl lg:text-6xl font-bold mb-2 tracking-tight">
               1.2<span className="text-3xl">K</span>
             </div>
             <div className="text-lg opacity-90">Students Empowered Through Yoga & Reflexology</div>
           </div>
 
           <div className="text-center">
-            <div className="text-5xl lg:text-6xl font-bold mb-2">
+            <div className="text-5xl lg:text-6xl font-bold mb-2 tracking-tight">
               3
             </div>
             <div className="text-lg opacity-90">Locations: Troon, Irvine & Kilwinning</div>

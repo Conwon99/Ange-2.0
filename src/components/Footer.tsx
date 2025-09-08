@@ -9,7 +9,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-2">
-            <h3 className="text-2xl font-normal mb-4">Holistics71 with Ange</h3>
+            <div className="mb-4">
+              <img 
+                src="/logo-purp.png" 
+                alt="Holistics71 with Ange" 
+                className="h-12 w-auto mb-2"
+              />
+            </div>
             <p className="text-primary-foreground/80 leading-relaxed max-w-md">
               I'm Ange, a 200 YTT qualified yoga teacher offering yoga classes, reflexology treatments, and aromatics products in Ayrshire. Perfect for beginners and those seeking holistic healing.
             </p>

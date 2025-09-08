@@ -23,6 +23,7 @@ export default {
 				'instrument': ['Instrument Sans', 'sans-serif'],
 				'playfair': ['Playfair Display', 'serif'],
 				'rocaone': ['RocaOne', 'sans-serif'],
+				'rocaone-light': ['RocaOneLight', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

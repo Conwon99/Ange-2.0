@@ -7,8 +7,9 @@ const TeamSection = () => {
     <section className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-6">
         <div className="mb-16">
-          <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone">
-            About Ange
+          <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
+            <span className="font-rocaone-light">About</span>{' '}
+            <span className="italic font-playfair text-purple-600">Ange</span>
           </h2>
         </div>
 
@@ -18,7 +19,7 @@ const TeamSection = () => {
             <div>
               <p className="text-sm font-medium mb-4 opacity-90">MY PHILOSOPHY</p>
               
-              <h3 className="text-3xl font-normal mb-6 leading-tight italic font-playfair">
+              <h3 className="text-3xl font-normal mb-6 leading-tight italic font-playfair text-purple-600 tracking-tight">
                 "The most important relationship we have is with ourselves"
               </h3>
               
@@ -34,8 +35,8 @@ const TeamSection = () => {
 
           {/* Ange's Journey */}
           <div className="group">
-            <div className="bg-gradient-to-br from-wellness-green-100 to-wellness-cream-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform">
-              <div className="aspect-[4/5] bg-gradient-to-br from-wellness-green-200 to-wellness-cream-200">
+            <div className="bg-gradient-to-br from-purple-100 to-purple-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform">
+              <div className="aspect-[4/5] bg-gradient-to-br from-purple-200 to-purple-100">
                 <img 
                   src="/assetsnew/Landing page small image.jpg" 
                   alt="Ange - 200 YTT qualified yoga teacher" 
@@ -58,8 +59,8 @@ const TeamSection = () => {
 
           {/* Qualifications */}
           <div className="group">
-            <div className="bg-gradient-to-br from-wellness-cream-100 to-wellness-green-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform">
-              <div className="aspect-[4/5] bg-gradient-to-br from-wellness-cream-200 to-wellness-green-200">
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform">
+              <div className="aspect-[4/5] bg-gradient-to-br from-purple-100 to-purple-200">
                 <img 
                   src="/assetsnew/About Ange.jpg" 
                   alt="Ange's qualifications and training" 

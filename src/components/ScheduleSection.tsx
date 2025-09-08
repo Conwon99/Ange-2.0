@@ -17,7 +17,7 @@ const ScheduleSection = () => {
                 />
               </div>
               {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-wellness-green-300 rounded-full opacity-60"></div>
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-purple-300 rounded-full opacity-60"></div>
               <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-wellness-cream-300 rounded-full opacity-40"></div>
             </div>
           </div>
@@ -25,8 +25,9 @@ const ScheduleSection = () => {
           {/* Right side - Content */}
           <div className="order-1 lg:order-2 space-y-8">
             <div>
-              <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone">
-                Yoga Classes
+              <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
+                <span className="font-rocaone-light">Yoga</span>{' '}
+                <span className="italic font-playfair text-purple-600">Classes</span>
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
                 Join me for weekly yoga classes in Troon, Irvine, and Kilwinning. I offer a variety of styles including Hatha, Yin, and Ashtanga yoga, perfect for all levels from beginners to advanced practitioners.
@@ -53,10 +54,10 @@ const ScheduleSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="https://bookwhen.com/yoga71withange" className="bg-primary text-primary-foreground px-8 py-4 rounded-full hover:bg-primary/90 transition-all duration-300 font-medium text-lg hover:scale-105 transform text-center">
+              <a href="https://bookwhen.com/yoga71withange" className="bg-purple-600 text-white px-8 py-4 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium text-lg hover:scale-105 transform text-center">
                 Book Your Class
               </a>
-              <a href="#contact" className="border-2 border-primary text-primary px-8 py-4 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-medium text-lg hover:scale-105 transform text-center">
+              <a href="#contact" className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full hover:bg-purple-600 hover:text-white transition-all duration-300 font-medium text-lg hover:scale-105 transform text-center">
                 Learn More
               </a>
             </div>

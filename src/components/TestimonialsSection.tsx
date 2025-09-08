@@ -25,8 +25,9 @@ const TestimonialsSection = () => {
     <section className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone">
-            What My Clients Say
+          <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
+            <span className="font-rocaone-light">What My</span>{' '}
+            <span className="italic font-playfair text-purple-600">Clients Say</span>
           </h2>
           <p className="text-xl text-foreground mb-2">
             Real experiences from my yoga and reflexology clients
@@ -37,11 +38,11 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="bg-wellness-green-100/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform"
+              className="bg-purple-100/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform"
             >
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-wellness-green-300 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-wellness-green-800 font-bold text-lg">
+                <div className="w-12 h-12 bg-purple-300 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-purple-800 font-bold text-lg">
                     {testimonial.name.charAt(0)}
                   </span>
                 </div>

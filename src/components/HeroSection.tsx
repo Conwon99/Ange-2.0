@@ -30,10 +30,10 @@ const HeroSection = () => {
         <div className="flex items-center min-h-[80vh]">
           <div className="space-y-8 animate-fade-in max-w-4xl">
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-7xl font-normal leading-tight text-foreground">
+              <h1 className="text-5xl lg:text-7xl font-normal leading-tight text-foreground tracking-tight">
                 <span className="font-rocaone">Yoga, Reflexology & Aromatics</span>
                 <br />
-                <span className="italic font-playfair" style={{color: '#7756a5'}}>with Ange</span>
+                <span className="italic font-playfair text-purple-600">with Ange</span>
               </h1>
               
               <p className="text-lg lg:text-xl text-muted-foreground max-w-lg leading-relaxed">

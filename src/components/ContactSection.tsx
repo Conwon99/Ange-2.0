@@ -33,7 +33,7 @@ const ContactSection = () => {
               {/* Large image */}
               <div className="col-span-2 aspect-[4/3] rounded-full overflow-hidden">
                 <img 
-                  src="/Contact/MartynT.CainPhotographer-yoga71-11.jpg"
+                  src="/Contact/yogapose.jpg"
                   alt="Yoga class in session"
                   className="w-full h-full object-cover"
                 />
@@ -42,7 +42,7 @@ const ContactSection = () => {
               {/* Small circular images */}
               <div className="aspect-square rounded-full overflow-hidden">
                 <img 
-                  src="/Contact/MartynT.CainPhotographer-yoga71-64.jpg"
+                  src="/Contact/sit.jpg"
                   alt="Yoga pose"
                   className="w-full h-full object-cover"
                 />
@@ -50,7 +50,7 @@ const ContactSection = () => {
               
               <div className="aspect-square rounded-full overflow-hidden">
                 <img 
-                  src="/Contact/MartynT.CainPhotographer-yoga71-68.jpg"
+                  src="/Contact/rock.jpg"
                   alt="Fitness training"
                   className="w-full h-full object-cover"
                 />
@@ -58,7 +58,7 @@ const ContactSection = () => {
               
               <div className="aspect-square rounded-full overflow-hidden">
                 <img 
-                  src="/Contact/MartynT.CainPhotographer-yoga71-68 (1).jpg"
+                  src="/Contact/grass.jpg"
                   alt="Wellness activity"
                   className="w-full h-full object-cover"
                 />
@@ -66,7 +66,7 @@ const ContactSection = () => {
               
               <div className="aspect-square rounded-full overflow-hidden">
                 <img 
-                  src="/Contact/MartynT.CainPhotographer-yoga71-64.jpg"
+                  src="/Contact/bowl.jpg"
                   alt="Movement practice"
                   className="w-full h-full object-cover"
                 />
@@ -77,8 +77,9 @@ const ContactSection = () => {
           {/* Right side - Contact form */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone">
-                Get in touch.
+              <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
+                <span className="font-rocaone-light">Get in</span>{' '}
+                <span className="italic font-playfair text-purple-600">touch.</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 Ready to start your wellness journey? Contact me to book a yoga class, reflexology treatment, or learn more about my aromatics products. I'm here to support your holistic healing.

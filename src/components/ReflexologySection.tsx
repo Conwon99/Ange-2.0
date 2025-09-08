@@ -9,8 +9,9 @@ const ReflexologySection = () => {
           {/* Left side - Content */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone">
-                Reflexology Treatments
+              <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
+                <span className="font-rocaone-light">Reflexology</span>{' '}
+                <span className="italic font-playfair text-purple-600">Treatments</span>
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
                 Experience the healing power of aromatherapy reflexology in my peaceful Irvine studio. These 60-minute treatments focus on your feet to promote natural healing, stress relief, and improved wellbeing.
@@ -40,19 +41,19 @@ const ReflexologySection = () => {
               <h3 className="text-xl font-semibold text-foreground">Benefits include:</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-wellness-green-500 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
                   <span className="text-muted-foreground text-sm">Stress relief</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-wellness-green-500 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
                   <span className="text-muted-foreground text-sm">Improved sleep</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-wellness-green-500 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
                   <span className="text-muted-foreground text-sm">Increased energy</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-wellness-green-500 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
                   <span className="text-muted-foreground text-sm">Natural healing</span>
                 </div>
               </div>
@@ -79,7 +80,7 @@ const ReflexologySection = () => {
                 />
               </div>
               {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-wellness-green-300 rounded-full opacity-60"></div>
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-purple-300 rounded-full opacity-60"></div>
               <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-wellness-cream-300 rounded-full opacity-40"></div>
             </div>
           </div>

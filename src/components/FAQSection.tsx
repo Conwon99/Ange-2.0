@@ -41,10 +41,10 @@ const FAQSection = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Left side - Title and description */}
           <div>
-            <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone">
+            <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
               Frequently
             </h2>
-            <h2 className="text-4xl lg:text-6xl font-normal text-wellness-green-600 mb-6 italic font-playfair">
+            <h2 className="text-4xl lg:text-6xl font-normal text-purple-600 mb-6 italic font-playfair tracking-tight">
               asked questions
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
