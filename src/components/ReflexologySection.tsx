@@ -74,7 +74,7 @@ const ReflexologySection = () => {
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/reflexology-photo.png"
+                  src="/assetsnew/reflex.png"
                   alt="Reflexology treatment in peaceful Irvine studio"
                   className="w-full h-full object-cover"
                 />

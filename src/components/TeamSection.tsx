@@ -20,8 +20,9 @@ const TeamSection = () => {
               <p className="text-sm font-medium mb-4 text-muted-foreground">MY PHILOSOPHY</p>
               
               <h3 className="text-3xl font-normal mb-6 leading-tight italic font-playfair text-foreground tracking-tight">
-                "The most important relationship we have is with ourselves"
+                "Health is a state of complete harmony of the body, mind and spirit"
               </h3>
+              <p className="text-sm text-muted-foreground mb-4">B.K.S. Iyengar</p>
               
               <p className="text-muted-foreground leading-relaxed mb-8">
                 I create safe, nurturing learning environments with a gentle, supportive, and creative teaching style. I believe you know your body best, and I focus on holistic wellbeing and balance.

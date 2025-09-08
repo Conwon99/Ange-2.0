@@ -7,17 +7,20 @@ const TestimonialsSection = () => {
     {
       name: "Wendy Wood",
       text: "I absolutely love my yoga practice with Ange. Since joining the classes last year I really feel the benefits both to my mind & physical wellbeing. Ange sprays her own blends of aromatherapy mists into the air which are just beautiful.",
-      rating: 5
+      rating: 5,
+      image: "/angeassets/test1.jpg"
     },
     {
       name: "Corinne Pennington",
       text: "I love coming to Ange's classes. Each month she brings a new focus, which keeps the practice fresh and meaningful. She isn't just a wonderful teacher, but has also become a real friend and support along the way.",
-      rating: 5
+      rating: 5,
+      image: "/angeassets/test2.jpg"
     },
     {
       name: "Liane Hunt",
       text: "Yoga with Ange is special. She has the ability to create a sense of ease as soon as you walk through the door. She creates a beautiful ambience with her essential oil room sprays and her energy as a person allows you to instantly feel safe and calm.",
-      rating: 5
+      rating: 5,
+      image: "/angeassets/TEST3.jpg"
     }
   ];
 
@@ -41,10 +44,12 @@ const TestimonialsSection = () => {
               className="bg-purple-100/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform"
             >
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-purple-300 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-purple-800 font-bold text-lg">
-                    {testimonial.name.charAt(0)}
-                  </span>
+                <div className="w-12 h-12 rounded-full overflow-hidden mr-3">
+                  <img 
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <h4 className="font-normal text-foreground">{testimonial.name}</h4>

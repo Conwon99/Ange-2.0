@@ -14,7 +14,7 @@ const ServicesSection = () => {
       icon: <Footprints className="w-12 h-12" />,
       title: "Reflexology Treatments",
       description: "60-minute aromatherapy reflexology sessions in my Irvine studio. Available Thursdays and Fridays for stress relief, natural healing, and improved sleep.",
-      image: "/assetsnew/reflexology photo.png"
+      image: "/assetsnew/reflex.png"
     },
     {
       icon: <Heart className="w-12 h-12" />,
@@ -48,9 +48,7 @@ const ServicesSection = () => {
                 <img 
                   src={service.image}
                   alt={service.title}
-                  className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 ${
-                    service.title === "Reflexology Treatments" ? "object-center scale-150" : ""
-                  }`}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               
