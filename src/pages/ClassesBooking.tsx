@@ -7,6 +7,7 @@ import { Calendar, Clock, MapPin, Users, Star, Footprints, Check } from 'lucide-
 
 const ClassesBooking = () => {
   const [activeTab, setActiveTab] = useState<'yoga' | 'reflexology'>('yoga');
+  const [locationFilter, setLocationFilter] = useState<string>('all');
   const classTypes = [
     {
       name: "Hatha Yoga",
@@ -33,19 +34,19 @@ const ClassesBooking = () => {
 
   const locations = [
     {
-      name: "Troon Old Parish Church",
-      address: "Troon, Ayrshire",
-      day: "Wednesday",
-      time: "10:00 AM",
-      type: "Hatha Yoga"
-    },
-    {
       name: "Woodlands Centre Irvine",
       address: "Irvine, Ayrshire",
       day: "Monday",
       time: "7:00 PM",
       type: "Mixed Styles",
       zoom: true
+    },
+    {
+      name: "Troon Old Parish Church",
+      address: "Troon, Ayrshire",
+      day: "Wednesday",
+      time: "10:00 AM",
+      type: "Hatha Yoga"
     },
     {
       name: "Barassie Beach",
@@ -79,6 +80,16 @@ const ClassesBooking = () => {
       zoom: true
     }
   ];
+
+  // Filter locations based on selected filter
+  const filteredLocations = locations.filter(location => {
+    if (locationFilter === 'all') return true;
+    if (locationFilter === 'zoom') return location.zoom;
+    if (locationFilter === 'troon') return location.address.includes('Troon');
+    if (locationFilter === 'irvine') return location.address.includes('Irvine');
+    if (locationFilter === 'kilwinning') return location.address.includes('Kilwinning');
+    return true;
+  });
 
   const specialSessions = [
     {
@@ -164,58 +175,81 @@ const ClassesBooking = () => {
           {/* Yoga Content */}
           {activeTab === 'yoga' && (
             <>
-              {/* Class Types */}
-              <section className="mb-16 px-6">
-                <h2 className="text-3xl lg:text-4xl font-normal text-foreground mb-8 font-rocaone tracking-tighter">
-                  Yoga Styles I Teach
-                </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {classTypes.map((classType, index) => (
-                <Card key={index} className="bg-purple-100/80 backdrop-blur-sm hover:bg-purple-200/80 transition-all duration-300 hover:scale-105 transform">
-                  <CardHeader>
-                    <CardTitle className="text-xl font-bold text-foreground flex items-center gap-2">
-                      <Star className="w-5 h-5 text-purple-600" />
-                      {classType.name}
-                    </CardTitle>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        {classType.duration}
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Users className="w-4 h-4" />
-                        {classType.level}
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4 leading-relaxed">
-                      {classType.description}
-                    </p>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Benefits:</h4>
-                      <ul className="space-y-1">
-                        {classType.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <div className="w-1.5 h-1.5 bg-purple-600 rounded-full"></div>
-                            {benefit}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </section>
 
           {/* Weekly Schedule */}
           <section className="mb-16 px-6">
             <h2 className="text-3xl lg:text-4xl font-normal text-foreground mb-8 text-center font-rocaone tracking-tight">
               Weekly Class Schedule
             </h2>
+            
+            {/* Filter Buttons */}
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
+              <Button
+                onClick={() => setLocationFilter('all')}
+                variant={locationFilter === 'all' ? 'default' : 'outline'}
+                className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                  locationFilter === 'all' 
+                    ? 'bg-purple-600 text-white hover:bg-purple-700' 
+                    : 'border-purple-600 text-purple-600 hover:bg-purple-50'
+                }`}
+              >
+                All Classes
+              </Button>
+              <Button
+                onClick={() => setLocationFilter('zoom')}
+                variant={locationFilter === 'zoom' ? 'default' : 'outline'}
+                className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                  locationFilter === 'zoom' 
+                    ? 'bg-purple-600 text-white hover:bg-purple-700' 
+                    : 'border-purple-600 text-purple-600 hover:bg-purple-50'
+                }`}
+              >
+                Zoom Classes
+              </Button>
+              <Button
+                onClick={() => setLocationFilter('troon')}
+                variant={locationFilter === 'troon' ? 'default' : 'outline'}
+                className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                  locationFilter === 'troon' 
+                    ? 'bg-purple-600 text-white hover:bg-purple-700' 
+                    : 'border-purple-600 text-purple-600 hover:bg-purple-50'
+                }`}
+              >
+                Troon
+              </Button>
+              <Button
+                onClick={() => setLocationFilter('irvine')}
+                variant={locationFilter === 'irvine' ? 'default' : 'outline'}
+                className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                  locationFilter === 'irvine' 
+                    ? 'bg-purple-600 text-white hover:bg-purple-700' 
+                    : 'border-purple-600 text-purple-600 hover:bg-purple-50'
+                }`}
+              >
+                Irvine
+              </Button>
+              <Button
+                onClick={() => setLocationFilter('kilwinning')}
+                variant={locationFilter === 'kilwinning' ? 'default' : 'outline'}
+                className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                  locationFilter === 'kilwinning' 
+                    ? 'bg-purple-600 text-white hover:bg-purple-700' 
+                    : 'border-purple-600 text-purple-600 hover:bg-purple-50'
+                }`}
+              >
+                Kilwinning
+              </Button>
+            </div>
+
             <div className="grid gap-4 max-w-4xl mx-auto">
-              {locations.map((location, index) => (
+              {filteredLocations.length === 0 ? (
+                <div className="text-center py-12">
+                  <p className="text-muted-foreground text-lg">
+                    No classes found for the selected filter.
+                  </p>
+                </div>
+              ) : (
+                filteredLocations.map((location, index) => (
                 <Card key={index} className="bg-purple-100/80 backdrop-blur-sm border-purple-200 hover:bg-purple-200/80 transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -236,23 +270,32 @@ const ClassesBooking = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="text-right">
-                        <div className="font-medium text-foreground mb-1">{location.type}</div>
-                        {location.zoom && (
-                          <div className="text-xs text-purple-600 bg-purple-100 px-2 py-1 rounded-full inline-block">
-                            + Zoom option
-                          </div>
-                        )}
-                        {location.weather && (
-                          <div className="text-xs text-muted-foreground">
-                            {location.weather}
-                          </div>
-                        )}
+                      <div className="flex flex-col items-end gap-3">
+                        <div className="text-right">
+                          <div className="font-medium text-foreground mb-1">{location.type}</div>
+                          {location.zoom && (
+                            <div className="text-xs text-purple-600 bg-purple-100 px-2 py-1 rounded-full inline-block">
+                              + Zoom option
+                            </div>
+                          )}
+                          {location.weather && (
+                            <div className="text-xs text-muted-foreground">
+                              {location.weather}
+                            </div>
+                          )}
+                        </div>
+                        <a 
+                          href="https://bookwhen.com/yoga71withange" 
+                          className="bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium text-sm hover:scale-105 transform whitespace-nowrap"
+                        >
+                          Book Now
+                        </a>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-              ))}
+                ))
+              )}
             </div>
           </section>
 

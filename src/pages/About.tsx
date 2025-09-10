@@ -103,8 +103,9 @@ const About = () => {
                   My Philosophy
                 </h2>
                 <blockquote className="text-2xl lg:text-3xl font-playfair italic mb-8 leading-relaxed">
-                  "The most important relationship we have is with ourselves"
+                  "Health is a state of complete harmony of the body, mind and spirit"
                 </blockquote>
+                <p className="text-lg text-primary-foreground/80 mb-8">B.K.S. Iyengar</p>
                 <p className="text-xl text-primary-foreground/90 leading-relaxed mb-8">
                   At Holistics71, I simply aim to guide and support your journey with compassion, knowledge, and care. Yoga and Reflexology have been life-changing for me—and I hope they offer the same for you.
                 </p>

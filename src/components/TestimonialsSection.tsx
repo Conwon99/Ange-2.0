@@ -46,7 +46,7 @@ const TestimonialsSection = () => {
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-3">
                   <img 
-                    src={testimonial.image}
+                    src={testimonial.image} 
                     alt={testimonial.name}
                     className="w-full h-full object-cover"
                   />

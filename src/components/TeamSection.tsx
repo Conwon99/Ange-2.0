@@ -29,9 +29,12 @@ const TeamSection = () => {
               </p>
             </div>
             
-            <button className="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium self-start hover:scale-105 transform">
+            <a 
+              href="https://bookwhen.com/yoga71withange" 
+              className="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium self-start hover:scale-105 transform inline-block"
+            >
               Book a Class
-            </button>
+            </a>
           </div>
 
           {/* Ange's Journey */}
@@ -47,9 +50,12 @@ const TeamSection = () => {
               <div className="p-6">
                 <div className="flex items-center justify-between">
                   <h4 className="text-xl font-normal text-foreground">My Journey</h4>
-                  <button className="flex items-center text-primary hover:text-primary/80 transition-colors duration-200">
+                  <a 
+                    href="/about" 
+                    className="flex items-center text-primary hover:text-primary/80 transition-colors duration-200"
+                  >
                     More <ArrowRight className="w-4 h-4 ml-1" />
-                  </button>
+                  </a>
                 </div>
                 <p className="text-muted-foreground mt-2 text-sm">
                   Started yoga in my 20s in Edinburgh. 2018: Completed 200 YTT training. 25 years teaching experience in Further Education.
@@ -71,9 +77,12 @@ const TeamSection = () => {
               <div className="p-6">
                 <div className="flex items-center justify-between">
                   <h4 className="text-xl font-normal text-foreground">Qualifications</h4>
-                  <button className="flex items-center text-primary hover:text-primary/80 transition-colors duration-200">
+                  <a 
+                    href="/about" 
+                    className="flex items-center text-primary hover:text-primary/80 transition-colors duration-200"
+                  >
                     More <ArrowRight className="w-4 h-4 ml-1" />
-                  </button>
+                  </a>
                 </div>
                 <p className="text-muted-foreground mt-2 text-sm">
                   200 YTT qualified yoga teacher. Trained in reflexology and aromatherapy. 7 years in business serving Ayrshire.

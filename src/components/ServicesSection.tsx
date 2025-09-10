@@ -41,37 +41,63 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="group rounded-2xl bg-purple-100/80 backdrop-blur-sm hover:bg-purple-200/80 transition-all duration-300 hover:scale-105 transform hover:shadow-lg overflow-hidden flex flex-col"
+              className={`group rounded-2xl backdrop-blur-sm transition-all duration-300 overflow-hidden flex flex-col ${
+                service.title === "Aromatics Products" 
+                  ? "bg-gray-100/80 hover:bg-gray-200/80 opacity-60" 
+                  : "bg-purple-100/80 hover:bg-purple-200/80 hover:scale-105 transform hover:shadow-lg"
+              }`}
             >
               {/* Image section - top half */}
               <div className="aspect-[4/3] overflow-hidden">
                 <img 
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className={`w-full h-full object-cover transition-transform duration-300 ${
+                    service.title === "Aromatics Products" 
+                      ? "grayscale" 
+                      : "group-hover:scale-110"
+                  }`}
                 />
               </div>
               
               {/* Content section - bottom half */}
               <div className="p-8 flex flex-col flex-grow">
-                <div className="text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className={`mb-6 transition-transform duration-300 ${
+                  service.title === "Aromatics Products" 
+                    ? "text-gray-400" 
+                    : "text-primary group-hover:scale-110"
+                }`}>
                   {service.icon}
                 </div>
                 
-                <h3 className="text-2xl font-normal text-foreground mb-4">
+                <h3 className={`text-2xl font-normal mb-4 ${
+                  service.title === "Aromatics Products" 
+                    ? "text-gray-500" 
+                    : "text-foreground"
+                }`}>
                   {service.title}
                 </h3>
                 
-                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
+                <p className={`leading-relaxed mb-6 flex-grow ${
+                  service.title === "Aromatics Products" 
+                    ? "text-gray-400" 
+                    : "text-muted-foreground"
+                }`}>
                   {service.description}
                 </p>
                 
-                <a 
-                  href={service.title === "Yoga Classes" ? "/classes-booking" : service.title === "Reflexology Treatments" ? "/classes-booking" : "/#contact"}
-                  className="w-full text-white px-6 py-3 rounded-full transition-all duration-300 font-medium hover:scale-105 transform mt-auto block text-center bg-purple-600 hover:bg-purple-700" 
-                >
-                  {service.title === "Yoga Classes" ? "Book Your Class" : service.title === "Reflexology Treatments" ? "Book Treatment" : "Shop Products"}
-                </a>
+                {service.title === "Aromatics Products" ? (
+                  <div className="w-full text-gray-500 px-6 py-3 rounded-full font-medium mt-auto block text-center bg-gray-300 cursor-not-allowed">
+                    Coming Soon
+                  </div>
+                ) : (
+                  <a 
+                    href={service.title === "Yoga Classes" ? "/classes-booking" : "/classes-booking"}
+                    className="w-full text-white px-6 py-3 rounded-full transition-all duration-300 font-medium hover:scale-105 transform mt-auto block text-center bg-purple-600 hover:bg-purple-700" 
+                  >
+                    {service.title === "Yoga Classes" ? "Book Your Class" : "Book Treatment"}
+                  </a>
+                )}
               </div>
             </div>
           ))}

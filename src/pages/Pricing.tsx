@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Calendar, Clock, MapPin, Check, Footprints } from 'lucide-react';
 
 const Pricing = () => {
   return (
@@ -24,118 +26,244 @@ const Pricing = () => {
           </div>
         </section>
 
-        {/* Pricing Cards */}
+        {/* Yoga Pricing Cards */}
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              
-              {/* Unlimited Live/Zoom */}
-              <div className="bg-white rounded-2xl shadow-lg p-8 border border-border hover:shadow-xl transition-shadow duration-300">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-rocaone text-foreground mb-4">Unlimited Live/Zoom</h3>
-                  <div className="text-4xl font-bold text-wellness-green-600 mb-2">£48</div>
-                  <p className="text-muted-foreground">monthly pass</p>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
+                Yoga Classes
+              </h2>
+              <p className="text-base text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+                Choose the perfect yoga package for your journey. All prices include personalized attention and holistic healing approaches from Ange's 7+ years of experience in Ayrshire.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
+              <Card className="bg-purple-100/80 backdrop-blur-sm hover:bg-purple-200/80 border-0 p-8 transition-all duration-300 hover:scale-105">
+                <CardHeader className="text-center pb-8">
+                  <CardTitle className="text-2xl font-medium mb-4 text-foreground">
+                    Unlimited Live/Zoom
+                  </CardTitle>
+                  <div className="mb-4">
+                    <span className="text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
+                      £48
+                    </span>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center">
-                    <span className="text-wellness-green-600 mr-3">✓</span>
+                  <p className="text-sm text-muted-foreground">
+                    monthly pass
+                  </p>
+                </CardHeader>
+
+                <CardContent className="space-y-6">
+                  <a 
+                    href="https://bookwhen.com/yoga71withange/passes"
+                    className="w-full py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center bg-purple-600 text-white hover:bg-purple-700"
+                  >
+                    Book Pass
+                  </a>
+
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-600" />
+                      <span className="text-sm leading-relaxed text-foreground">
                     Unlimited live classes in Troon, Irvine & Kilwinning
+                      </span>
                   </li>
-                  <li className="flex items-center">
-                    <span className="text-wellness-green-600 mr-3">✓</span>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-600" />
+                      <span className="text-sm leading-relaxed text-foreground">
                     Unlimited Zoom classes
+                      </span>
                   </li>
-                  <li className="flex items-center">
-                    <span className="text-wellness-green-600 mr-3">✓</span>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-600" />
+                      <span className="text-sm leading-relaxed text-foreground">
                     All yoga styles included
+                      </span>
                   </li>
-                  <li className="flex items-center">
-                    <span className="text-wellness-green-600 mr-3">✓</span>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-600" />
+                      <span className="text-sm leading-relaxed text-foreground">
                     Perfect for regular practitioners
+                      </span>
                   </li>
                 </ul>
-                <a 
-                  href="https://bookwhen.com/yoga71withange" 
-                  className="w-full bg-wellness-green-600 text-white py-3 px-6 rounded-full hover:bg-wellness-green-700 transition-colors duration-300 font-medium text-center block"
-                >
-                  Book Pass
-                </a>
-              </div>
+                </CardContent>
+              </Card>
 
-              {/* Unlimited Zoom-Only */}
-              <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-wellness-green-600 hover:shadow-xl transition-shadow duration-300">
-                <div className="text-center mb-8">
-                  <div className="bg-wellness-green-600 text-white px-4 py-1 rounded-full text-sm font-medium mb-4 inline-block">
-                    Most Popular
+              <Card className="bg-purple-600 text-white border-0 p-8 transition-all duration-300 hover:scale-105 transform scale-105">
+                <CardHeader className="text-center pb-8">
+                  <CardTitle className="text-2xl font-medium mb-4 text-white">
+                    Drop-in Classes
+                  </CardTitle>
+                  <div className="mb-4">
+                    <span className="text-5xl lg:text-6xl font-bold tracking-tight text-white">
+                      £9
+                    </span>
                   </div>
-                  <h3 className="text-2xl font-rocaone text-foreground mb-4">Unlimited Zoom-Only</h3>
-                  <div className="text-4xl font-bold text-wellness-green-600 mb-2">£25</div>
-                  <p className="text-muted-foreground">monthly pass</p>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center">
-                    <span className="text-wellness-green-600 mr-3">✓</span>
-                    Unlimited Zoom classes only
+                  <p className="text-sm text-white/80">
+                    per class
+                  </p>
+                </CardHeader>
+
+                <CardContent className="space-y-6">
+                  <a 
+                    href="https://bookwhen.com/yoga71withange/passes"
+                    className="w-full py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center bg-white text-purple-600 hover:bg-white/90"
+                  >
+                    Book Class
+                  </a>
+
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-white" />
+                      <span className="text-sm leading-relaxed text-white/90">
+                        £9 for regular classes
+                      </span>
                   </li>
-                  <li className="flex items-center">
-                    <span className="text-wellness-green-600 mr-3">✓</span>
-                    All yoga styles included
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-white" />
+                      <span className="text-sm leading-relaxed text-white/90">
+                        £5 for special offers
+                      </span>
                   </li>
-                  <li className="flex items-center">
-                    <span className="text-wellness-green-600 mr-3">✓</span>
-                    Perfect for home practice
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-white" />
+                      <span className="text-sm leading-relaxed text-white/90">
+                        £7 for Beach Yoga
+                      </span>
                   </li>
-                  <li className="flex items-center">
-                    <span className="text-wellness-green-600 mr-3">✓</span>
-                    Great value for online sessions
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-white" />
+                      <span className="text-sm leading-relaxed text-white/90">
+                        Perfect for trying out
+                      </span>
                   </li>
                 </ul>
-                <a 
-                  href="https://bookwhen.com/yoga71withange" 
-                  className="w-full bg-wellness-green-600 text-white py-3 px-6 rounded-full hover:bg-wellness-green-700 transition-colors duration-300 font-medium text-center block"
+                </CardContent>
+              </Card>
+
+              <Card className="bg-purple-100/80 backdrop-blur-sm hover:bg-purple-200/80 border-0 p-8 transition-all duration-300 hover:scale-105">
+                <CardHeader className="text-center pb-8">
+                  <CardTitle className="text-2xl font-medium mb-4 text-foreground">
+                    Unlimited Zoom-Only
+                  </CardTitle>
+                  <div className="mb-4">
+                    <span className="text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
+                      £25
+                    </span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    monthly pass
+                  </p>
+                </CardHeader>
+
+                <CardContent className="space-y-6">
+                  <a 
+                    href="https://bookwhen.com/yoga71withange/passes"
+                    className="w-full py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center bg-purple-600 text-white hover:bg-purple-700"
                 >
                   Book Pass
                 </a>
-              </div>
 
-              {/* Drop-in Classes */}
-              <div className="bg-white rounded-2xl shadow-lg p-8 border border-border hover:shadow-xl transition-shadow duration-300 md:col-span-2 lg:col-span-1">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-rocaone text-foreground mb-4">Drop-in Classes</h3>
-                  <div className="text-4xl font-bold text-wellness-green-600 mb-2">£9</div>
-                  <p className="text-muted-foreground">per class</p>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center">
-                    <span className="text-wellness-green-600 mr-3">✓</span>
-                    £9 for regular classes
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-600" />
+                      <span className="text-sm leading-relaxed text-foreground">
+                        Unlimited Zoom classes only
+                      </span>
                   </li>
-                  <li className="flex items-center">
-                    <span className="text-wellness-green-600 mr-3">✓</span>
-                    £5 for special offers
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-600" />
+                      <span className="text-sm leading-relaxed text-foreground">
+                        All yoga styles included
+                      </span>
                   </li>
-                  <li className="flex items-center">
-                    <span className="text-wellness-green-600 mr-3">✓</span>
-                    £7 for Beach Yoga
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-600" />
+                      <span className="text-sm leading-relaxed text-foreground">
+                        Perfect for home practice
+                      </span>
                   </li>
-                  <li className="flex items-center">
-                    <span className="text-wellness-green-600 mr-3">✓</span>
-                    Perfect for trying out
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-600" />
+                      <span className="text-sm leading-relaxed text-foreground">
+                        Great value for online sessions
+                      </span>
                   </li>
                 </ul>
-                <a 
-                  href="https://bookwhen.com/yoga71withange" 
-                  className="w-full bg-wellness-green-600 text-white py-3 px-6 rounded-full hover:bg-wellness-green-700 transition-colors duration-300 font-medium text-center block"
-                >
-                  Book Class
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Reflexology Pricing */}
+        <section className="py-20 lg:py-32 bg-purple-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
+                Reflexology Sessions
+              </h2>
+              <p className="text-base text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+                Experience the healing power of aromatherapy reflexology in a peaceful setting. These 60-minute treatments focus on your feet to promote natural healing, stress relief, and improved wellbeing.
+              </p>
+            </div>
+
+            <div className="max-w-2xl mx-auto">
+              <Card className="bg-purple-600 text-white">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-center flex items-center justify-center gap-2">
+                    <Footprints className="w-6 h-6" />
+                    Reflexology Sessions
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h3 className="font-semibold mb-3 flex items-center gap-2">
+                        <Calendar className="w-5 h-5" />
+                        Availability
+                      </h3>
+                      <ul className="space-y-2 text-white/90">
+                        <li>• Thursdays and Fridays</li>
+                        <li>• During the day (last appointments at 3:30pm)</li>
+                        <li>• Irvine studio (in-home)</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-3 flex items-center gap-2">
+                        <Clock className="w-5 h-5" />
+                        Session Details
+                      </h3>
+                      <ul className="space-y-2 text-white/90">
+                        <li>• 60-minute sessions</li>
+                        <li>• Aromatherapy included</li>
+                        <li>• Gentle, non-invasive</li>
+                        <li>• All levels welcome</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="text-center pt-4 border-t border-white/20">
+                    <div className="text-3xl font-bold mb-2">£40</div>
+                    <p className="text-white/80">per session</p>
+                  </div>
+                  <div className="text-center">
+                    <a 
+                      href="/#contact" 
+                      className="bg-white text-purple-600 px-8 py-3 rounded-full hover:bg-white/90 transition-colors duration-300 font-medium text-lg inline-block"
+                    >
+                      Book Session
                 </a>
               </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
 
         {/* Additional Services */}
-        <section className="py-20 lg:py-32 bg-wellness-green-50">
+        <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone">
