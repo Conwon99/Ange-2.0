@@ -21,7 +21,6 @@ const Index = () => {
     // Check if there's a hash in the URL
     if (location.hash) {
       // Wait for the page to load, then scroll to the section
-      // Use a longer delay to ensure ScrollToTop has finished
       setTimeout(() => {
         const element = document.querySelector(location.hash);
         if (element) {
@@ -30,7 +29,7 @@ const Index = () => {
             block: 'start'
           });
         }
-      }, 300);
+      }, 100);
     }
   }, [location.hash]);
   return (
