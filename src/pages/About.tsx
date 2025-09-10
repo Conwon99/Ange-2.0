@@ -150,7 +150,7 @@ const About = () => {
                     </div>
                     <h3 className="text-2xl font-rocaone text-foreground mb-4">Yoga Teacher Training</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      200 YTT qualified yoga teacher since 2018. Specializing in Hatha, Yin, and Ashtanga styles with 7+ years of teaching experience.
+                      200 YTT qualified yoga teacher since 2018. Specializing in Hatha and Yin styles with 7+ years of teaching experience.
                     </p>
                   </div>
                 </div>

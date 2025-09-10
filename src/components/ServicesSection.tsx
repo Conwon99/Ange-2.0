@@ -7,7 +7,7 @@ const ServicesSection = () => {
     {
       icon: <Sparkles className="w-12 h-12" />,
       title: "Yoga Classes",
-      description: "Weekly classes in Troon, Irvine and Kilwinning, plus online zoom classes. Hatha, Yin, and Ashtanga styles for all levels. Special beach yoga sessions and monthly bedtime yoga with sound bath.",
+      description: "Weekly classes in Troon, Irvine and Kilwinning, plus online zoom classes. Hatha and Yin styles for all levels. Special beach yoga sessions and monthly bedtime yoga with sound bath.",
       image: "/Contact/yogapose.jpg"
     },
     {
@@ -41,48 +41,28 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className={`group rounded-2xl backdrop-blur-sm transition-all duration-300 overflow-hidden flex flex-col ${
-                service.title === "Aromatics Products" 
-                  ? "bg-gray-100/80 hover:bg-gray-200/80 opacity-60" 
-                  : "bg-purple-100/80 hover:bg-purple-200/80 hover:scale-105 transform hover:shadow-lg"
-              }`}
+              className="group rounded-2xl bg-purple-100/80 backdrop-blur-sm hover:bg-purple-200/80 transition-all duration-300 hover:scale-105 transform hover:shadow-lg overflow-hidden flex flex-col"
             >
               {/* Image section - top half */}
               <div className="aspect-[4/3] overflow-hidden">
                 <img 
                   src={service.image}
                   alt={service.title}
-                  className={`w-full h-full object-cover transition-transform duration-300 ${
-                    service.title === "Aromatics Products" 
-                      ? "grayscale" 
-                      : "group-hover:scale-110"
-                  }`}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               
               {/* Content section - bottom half */}
               <div className="p-8 flex flex-col flex-grow">
-                <div className={`mb-6 transition-transform duration-300 ${
-                  service.title === "Aromatics Products" 
-                    ? "text-gray-400" 
-                    : "text-primary group-hover:scale-110"
-                }`}>
+                <div className="text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
                 
-                <h3 className={`text-2xl font-normal mb-4 ${
-                  service.title === "Aromatics Products" 
-                    ? "text-gray-500" 
-                    : "text-foreground"
-                }`}>
+                <h3 className="text-2xl font-normal text-foreground mb-4">
                   {service.title}
                 </h3>
                 
-                <p className={`leading-relaxed mb-6 flex-grow ${
-                  service.title === "Aromatics Products" 
-                    ? "text-gray-400" 
-                    : "text-muted-foreground"
-                }`}>
+                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
                   {service.description}
                 </p>
                 

@@ -23,13 +23,6 @@ const ClassesBooking = () => {
       level: "All levels",
       benefits: ["Deep relaxation", "Increased flexibility", "Stress relief", "Joint mobility"]
     },
-    {
-      name: "Ashtanga Yoga",
-      description: "Dynamic, flowing practice with a set sequence of poses. Builds strength, flexibility, and endurance.",
-      duration: "60 minutes",
-      level: "All levels (modifications provided)",
-      benefits: ["Increased strength", "Better flexibility", "Improved focus", "Physical challenge"]
-    }
   ];
 
   const locations = [
@@ -71,14 +64,6 @@ const ClassesBooking = () => {
       time: "6:00 PM",
       type: "Yin Yoga"
     },
-    {
-      name: "Corespace Kilwinning",
-      address: "Kilwinning, Ayrshire",
-      day: "Thursday",
-      time: "7:15 PM",
-      type: "Ashtanga Yoga",
-      zoom: true
-    }
   ];
 
   // Filter locations based on selected filter
