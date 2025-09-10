@@ -52,15 +52,16 @@ const HeroSection = () => {
               >
                 Book Your Class
               </a>
-              <button
-                className="border-2 px-8 py-4 rounded-full transition-all duration-300 font-medium text-lg hover:scale-105 transform flex items-center gap-2"
+              <a 
+                href="/zoom-booking"
+                className="border-2 px-8 py-4 rounded-full transition-all duration-300 font-medium text-lg hover:scale-105 transform flex items-center justify-center gap-2"
                 style={{ backgroundColor: '#ffffff', color: '#7756a5', borderColor: '#ffffff' }}
                 onMouseEnter={(e) => { (e.target as HTMLElement).style.backgroundColor = '#f3f4f6'; (e.target as HTMLElement).style.color = '#7756a5'; }}
                 onMouseLeave={(e) => { (e.target as HTMLElement).style.backgroundColor = '#ffffff'; (e.target as HTMLElement).style.color = '#7756a5'; }}
               >
                 <MessageCircle className="w-5 h-5" />
                 Message
-              </button>
+              </a>
             </div>
           </div>
         </div>

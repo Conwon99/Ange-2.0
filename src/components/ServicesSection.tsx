@@ -72,7 +72,7 @@ const ServicesSection = () => {
                   </div>
                 ) : (
                   <a 
-                    href={service.title === "Yoga Classes" ? "/classes-booking" : "/classes-booking"}
+                    href={service.title === "Yoga Classes" ? "/classes-booking" : service.title === "Reflexology Treatments" ? "/classes-booking?tab=reflexology" : "/classes-booking"}
                     className="w-full text-white px-6 py-3 rounded-full transition-all duration-300 font-medium hover:scale-105 transform mt-auto block text-center bg-purple-600 hover:bg-purple-700" 
                   >
                     {service.title === "Yoga Classes" ? "Book Your Class" : "Book Treatment"}

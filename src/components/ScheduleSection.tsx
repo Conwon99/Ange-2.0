@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from './ui/button';
+import { MessageCircle } from 'lucide-react';
 
 const ScheduleSection = () => {
   return (
@@ -54,11 +55,18 @@ const ScheduleSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="https://bookwhen.com/yoga71withange" className="bg-purple-600 text-white px-8 py-4 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium text-lg hover:scale-105 transform text-center">
+              <a href="/classes-booking" className="bg-purple-600 text-white px-8 py-4 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium text-lg hover:scale-105 transform text-center">
                 Book Your Class
               </a>
-              <a href="#contact" className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full hover:bg-purple-600 hover:text-white transition-all duration-300 font-medium text-lg hover:scale-105 transform text-center">
-                Learn More
+              <a 
+                href="/zoom-booking"
+                className="border-2 px-8 py-4 rounded-full transition-all duration-300 font-medium text-lg hover:scale-105 transform flex items-center justify-center gap-2"
+                style={{ backgroundColor: '#ffffff', color: '#7756a5', borderColor: '#7756a5' }}
+                onMouseEnter={(e) => { (e.target as HTMLElement).style.backgroundColor = '#7756a5'; (e.target as HTMLElement).style.color = '#ffffff'; }}
+                onMouseLeave={(e) => { (e.target as HTMLElement).style.backgroundColor = '#ffffff'; (e.target as HTMLElement).style.color = '#7756a5'; }}
+              >
+                <MessageCircle className="w-5 h-5" />
+                Message
               </a>
             </div>
           </div>

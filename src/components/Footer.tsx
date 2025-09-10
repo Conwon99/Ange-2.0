@@ -1,11 +1,12 @@
 
 import React from 'react';
 import { Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-12">
-      <div className="container mx-auto px-6">
+    <footer className="bg-primary text-primary-foreground py-12 w-full">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-2">
@@ -25,14 +26,14 @@ const Footer = () => {
           <div>
             <h4 className="font-normal mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="/" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Home</a></li>
-              <li><a href="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">About</a></li>
-              <li><a href="/classes-booking" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Classes & Booking</a></li>
+              <li><Link to="/" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Home</Link></li>
+              <li><Link to="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">About</Link></li>
+              <li><Link to="/classes-booking" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Classes & Booking</Link></li>
               <li><a href="/#services" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Services</a></li>
-              <li><a href="/pricing" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Pricing</a></li>
+              <li><Link to="/pricing" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Pricing</Link></li>
               <li><a href="/#testimonials" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Testimonials</a></li>
               <li><a href="/#faq" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">FAQs</a></li>
-              <li><a href="/#contact" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Contact</a></li>
+              <li><Link to="/zoom-booking" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Contact</Link></li>
             </ul>
           </div>
 
@@ -48,7 +49,7 @@ const Footer = () => {
                 <a href="https://bookwhen.com/yoga71withange" className="block bg-primary-foreground text-primary px-4 py-2 rounded-full hover:bg-primary-foreground/90 transition-colors duration-200 font-medium text-center text-sm">
                   Book Classes
                 </a>
-                <a href="https://www.facebook.com/holistics71" className="block bg-primary-foreground text-primary px-4 py-2 rounded-full hover:bg-primary-foreground/90 transition-colors duration-200 font-medium text-center text-sm">
+                <a href="https://www.facebook.com/yoga71withange" className="block bg-primary-foreground text-primary px-4 py-2 rounded-full hover:bg-primary-foreground/90 transition-colors duration-200 font-medium text-center text-sm">
                   Facebook
                 </a>
                 <a href="https://wa.me/447814487281" className="block bg-primary-foreground text-primary px-4 py-2 rounded-full hover:bg-primary-foreground/90 transition-colors duration-200 font-medium text-center text-sm">

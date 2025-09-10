@@ -33,7 +33,7 @@ const StatsSection = () => {
             <p className="text-lg mb-4 leading-relaxed">
               Join Ange's holistic wellness community and experience the transformative power of yoga, reflexology, and aromatics. Perfect for beginners and those seeking natural healing.
             </p>
-            <a href="https://bookwhen.com/yoga71withange" className="bg-primary text-primary-foreground px-8 py-3 rounded-full hover:bg-primary/90 transition-all duration-300 font-medium inline-block">
+            <a href="/classes-booking" className="bg-primary text-primary-foreground px-8 py-3 rounded-full hover:bg-primary/90 transition-all duration-300 font-medium inline-block">
               Book Your Class
             </a>
           </div>

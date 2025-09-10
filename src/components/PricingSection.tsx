@@ -100,7 +100,13 @@ const PricingSection = () => {
 
               <CardContent className="space-y-6">
                 <a 
-                  href={plan.name === "Yoga Classes" ? "https://bookwhen.com/yoga71withange" : "/#contact"}
+                  href={
+                    plan.name === "Unlimited Zoom-Only" 
+                      ? "/zoom-booking" 
+                      : plan.name === "Drop-in Classes" 
+                        ? "https://bookwhen.com/yoga71withange" 
+                        : "https://bookwhen.com/yoga71withange/passes"
+                  }
                   className={`w-full py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center ${
                     plan.featured 
                       ? 'bg-white text-purple-600 hover:bg-white/90 border border-white/20' 

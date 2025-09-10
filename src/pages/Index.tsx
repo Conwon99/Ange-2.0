@@ -1,5 +1,6 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import StatsSection from '../components/StatsSection';
@@ -14,6 +15,24 @@ import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
 
 const Index = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    if (location.hash) {
+      // Wait for the page to load, then scroll to the section
+      // Use a longer delay to ensure ScrollToTop has finished
+      setTimeout(() => {
+        const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }, 300);
+    }
+  }, [location.hash]);
   return (
     <div className="min-h-screen bg-background">
       {/* Full-width fixed header */}
@@ -36,8 +55,8 @@ const Index = () => {
           <PricingSection />
           <ContactSection />
           <FAQSection />
-          <Footer />
         </div>
+        <Footer />
       </main>
     </div>
   );

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
@@ -8,6 +9,15 @@ import { Calendar, Clock, MapPin, Users, Star, Footprints, Check } from 'lucide-
 const ClassesBooking = () => {
   const [activeTab, setActiveTab] = useState<'yoga' | 'reflexology'>('yoga');
   const [locationFilter, setLocationFilter] = useState<string>('all');
+  const [searchParams] = useSearchParams();
+
+  // Check URL parameters on component mount
+  useEffect(() => {
+    const tab = searchParams.get('tab');
+    if (tab === 'reflexology') {
+      setActiveTab('reflexology');
+    }
+  }, [searchParams]);
   const classTypes = [
     {
       name: "Hatha Yoga",
@@ -114,12 +124,13 @@ const ClassesBooking = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-6xl mx-auto">
-        <Header />
-        
-        <main className="py-20">
-          {/* Hero Section */}
-          <section className="text-center mb-16 px-6">
+      {/* Full-width fixed header */}
+      <Header />
+      
+      {/* Main content */}
+      <main className="pt-24">
+        {/* Hero Section */}
+        <section className="text-center mb-16 px-6">
             <h1 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tighter">
               Classes & Booking
             </h1>
@@ -453,7 +464,7 @@ const ClassesBooking = () => {
 
                 <CardContent className="space-y-6">
                   <a 
-                    href="https://bookwhen.com/yoga71withange/passes"
+                    href="/zoom-booking"
                     className="w-full py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center bg-purple-600 text-white hover:bg-purple-700"
                   >
                     Book Pass
@@ -549,24 +560,6 @@ const ClassesBooking = () => {
                 </div>
               </section>
 
-              {/* Benefits */}
-              <section className="mb-16 px-6">
-                <h2 className="text-3xl lg:text-4xl font-normal text-foreground mb-8 text-center font-rocaone tracking-tight">
-                  Benefits of Reflexology
-                </h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                  {reflexologyInfo.benefits.map((benefit, index) => (
-                    <Card key={index} className="bg-purple-100/80 backdrop-blur-sm hover:bg-purple-200/80 transition-all duration-300 hover:scale-105 transform">
-                      <CardContent className="p-6 text-center">
-                        <div className="w-12 h-12 bg-purple-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <Footprints className="w-6 h-6 text-purple-600" />
-                        </div>
-                        <h3 className="font-semibold text-foreground">{benefit}</h3>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </section>
 
               {/* Availability & Pricing */}
               <section className="mb-16 px-6">
@@ -624,7 +617,7 @@ const ClassesBooking = () => {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a 
-                      href="/#contact" 
+                      href="/zoom-booking" 
                       className="bg-purple-600 text-white px-8 py-4 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium text-lg hover:scale-105 transform"
                     >
                       Book Treatment
@@ -641,7 +634,6 @@ const ClassesBooking = () => {
             </>
           )}
         </main>
-      </div>
       
       <Footer />
     </div>

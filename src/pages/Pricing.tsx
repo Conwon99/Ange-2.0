@@ -160,7 +160,7 @@ const Pricing = () => {
 
                 <CardContent className="space-y-6">
                   <a 
-                    href="https://bookwhen.com/yoga71withange/passes"
+                    href="/zoom-booking"
                     className="w-full py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center bg-purple-600 text-white hover:bg-purple-700"
                 >
                   Book Pass

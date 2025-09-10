@@ -1,27 +1,10 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Button } from './ui/button';
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    email: '',
-    message: ''
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-  };
 
   return (
     <section id="contact" className="py-20 lg:py-32 bg-background">
@@ -86,7 +69,11 @@ const ContactSection = () => {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form 
+              action="https://formspree.io/f/xwpnyaog" 
+              method="POST"
+              className="space-y-6"
+            >
               <div>
                 <label htmlFor="email" className="block text-foreground font-medium mb-2">
                   Email (required)
@@ -95,8 +82,6 @@ const ContactSection = () => {
                   type="email"
                   id="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
                   placeholder="Email"
                   required
                   className="bg-white/70 border-border text-foreground placeholder:text-muted-foreground focus:border-primary"
@@ -110,8 +95,6 @@ const ContactSection = () => {
                 <Textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
                   placeholder="Message"
                   rows={4}
                   required
@@ -121,7 +104,7 @@ const ContactSection = () => {
 
               <Button 
                 type="submit"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full font-medium hover:scale-105 transform transition-all duration-300"
+                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-medium hover:scale-105 transform transition-all duration-300"
               >
                 Send
               </Button>
