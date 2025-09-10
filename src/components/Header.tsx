@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,30 +16,32 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src="/logo-purp.png" 
-              alt="Holistics71 with Ange" 
-              className="h-12 w-auto"
-            />
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/Logo with ange.png" 
+                alt="Ange Wellness" 
+                className="h-12 w-auto"
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
+            <Link to="/" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               Home
-            </a>
-            <a href="/about" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
+            </Link>
+            <Link to="/about" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               About
-            </a>
-            <a href="/classes-booking" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
+            </Link>
+            <Link to="/classes-booking" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               Classes & Booking
-            </a>
+            </Link>
             <a href="/#services" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               Services
             </a>
-            <a href="/pricing" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
+            <Link to="/pricing" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               Pricing
-            </a>
+            </Link>
             <a href="/#testimonials" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               Testimonials
             </a>
@@ -48,10 +51,14 @@ const Header = () => {
             <a href="/#contact" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               Contact
             </a>
+          </nav>
+
+          {/* Desktop Book Now Button */}
+          <div className="hidden md:block">
             <a href="https://bookwhen.com/yoga71withange" className="text-white px-6 py-2 rounded-full transition-colors duration-200 font-medium" style={{backgroundColor: '#7756a5'}} onMouseEnter={(e) => e.target.style.backgroundColor = '#6a4a8f'} onMouseLeave={(e) => e.target.style.backgroundColor = '#7756a5'}>
               Book Now
             </a>
-          </nav>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -66,27 +73,27 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 border-t border-border pt-4">
             <div className="flex flex-col space-y-4">
-              <a 
-                href="/" 
+              <Link 
+                to="/" 
                 className="text-foreground hover:text-primary transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
-              </a>
-              <a 
-                href="/about" 
+              </Link>
+              <Link 
+                to="/about" 
                 className="text-foreground hover:text-primary transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
-              </a>
-              <a 
-                href="/classes-booking" 
+              </Link>
+              <Link 
+                to="/classes-booking" 
                 className="text-foreground hover:text-primary transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Classes & Booking
-              </a>
+              </Link>
               <a 
                 href="/#services" 
                 className="text-foreground hover:text-primary transition-colors duration-200"
@@ -94,13 +101,13 @@ const Header = () => {
               >
                 Services
               </a>
-              <a 
-                href="/pricing" 
+              <Link 
+                to="/pricing" 
                 className="text-foreground hover:text-primary transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Pricing
-              </a>
+              </Link>
               <a 
                 href="/#testimonials" 
                 className="text-foreground hover:text-primary transition-colors duration-200"
@@ -122,7 +129,17 @@ const Header = () => {
               >
                 Contact
               </a>
-              <a href="https://bookwhen.com/yoga71withange" className="text-white px-6 py-2 rounded-full transition-colors duration-200 font-medium text-left" style={{backgroundColor: '#7756a5'}} onMouseEnter={(e) => e.target.style.backgroundColor = '#6a4a8f'} onMouseLeave={(e) => e.target.style.backgroundColor = '#7756a5'}>
+            </div>
+            {/* Mobile Book Now Button */}
+            <div className="mt-6 pt-4 border-t border-border">
+              <a 
+                href="https://bookwhen.com/yoga71withange" 
+                className="text-white px-6 py-2 rounded-full transition-colors duration-200 font-medium text-center block" 
+                style={{backgroundColor: '#7756a5'}} 
+                onMouseEnter={(e) => e.target.style.backgroundColor = '#6a4a8f'} 
+                onMouseLeave={(e) => e.target.style.backgroundColor = '#7756a5'}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Book Now
               </a>
             </div>

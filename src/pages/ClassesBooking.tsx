@@ -31,7 +31,7 @@ const ClassesBooking = () => {
       address: "Irvine, Ayrshire",
       day: "Monday",
       time: "7:00 PM",
-      type: "Mixed Styles",
+      type: "£9",
       zoom: true
     },
     {
@@ -39,22 +39,14 @@ const ClassesBooking = () => {
       address: "Troon, Ayrshire",
       day: "Wednesday",
       time: "10:00 AM",
-      type: "Hatha Yoga"
-    },
-    {
-      name: "Barassie Beach",
-      address: "Troon, Ayrshire",
-      day: "Wednesday",
-      time: "7:00 PM",
-      type: "Beach Yoga",
-      weather: "Weather permitting"
+      type: "£9"
     },
     {
       name: "St Meddan's Church",
       address: "Troon, Ayrshire",
       day: "Wednesday",
       time: "7:00 PM",
-      type: "Mixed Styles",
+      type: "£9",
       weather: "Alternative to beach"
     },
     {
@@ -62,8 +54,16 @@ const ClassesBooking = () => {
       address: "Kilwinning, Ayrshire",
       day: "Thursday",
       time: "6:00 PM",
-      type: "Yin Yoga"
+      type: "£9"
     },
+    {
+      name: "Corespace Kilwinning",
+      address: "Kilwinning, Ayrshire",
+      day: "Thursday",
+      time: "7:15 PM",
+      type: "£9",
+      zoom: true
+    }
   ];
 
   // Filter locations based on selected filter
@@ -82,7 +82,7 @@ const ClassesBooking = () => {
       location: "Kilwinning",
       description: "A special monthly session combining gentle yoga with sound healing for deep relaxation and better sleep.",
       price: "£10",
-      duration: "90 minutes"
+      duration: "60 minutes"
     },
     {
       name: "Beach Yoga Sessions",
@@ -253,28 +253,26 @@ const ClassesBooking = () => {
                             <Clock className="w-4 h-4 text-purple-600" />
                             {location.time}
                           </div>
+                          <div className="flex items-center gap-1">
+                            <span className="text-purple-600 font-semibold">£9</span>
+                          </div>
                         </div>
                       </div>
-                      <div className="flex flex-col items-end gap-3">
-                        <div className="text-right">
-                          <div className="font-medium text-foreground mb-1">{location.type}</div>
-                          {location.zoom && (
-                            <div className="text-xs text-purple-600 bg-purple-100 px-2 py-1 rounded-full inline-block">
-                              + Zoom option
-                            </div>
-                          )}
-                          {location.weather && (
-                            <div className="text-xs text-muted-foreground">
-                              {location.weather}
-                            </div>
-                          )}
-                        </div>
+                      <div className="flex flex-col gap-2">
                         <a 
                           href="https://bookwhen.com/yoga71withange" 
-                          className="bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium text-sm hover:scale-105 transform whitespace-nowrap"
+                          className="bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium text-sm hover:scale-105 transform whitespace-nowrap text-center w-24"
                         >
-                          Book Now
+                          Book
                         </a>
+                        {location.zoom && (
+                          <a 
+                            href="/zoom-booking" 
+                            className="bg-purple-100 text-purple-600 px-4 py-2 rounded-full hover:bg-purple-200 transition-all duration-300 font-medium text-sm hover:scale-105 transform whitespace-nowrap text-center border border-purple-300 w-24"
+                          >
+                            Book Zoom
+                          </a>
+                        )}
                       </div>
                     </div>
                   </CardContent>
@@ -298,6 +296,17 @@ const ClassesBooking = () => {
                       <MapPin className="w-4 h-4" />
                       {session.location}
                     </div>
+                    {session.name === "Beach Yoga Sessions" && (
+                      <div className="bg-yellow-500/20 border border-yellow-400/30 rounded-lg p-3 mt-3">
+                        <div className="flex items-center gap-2 text-yellow-200">
+                          <span className="text-lg">⚠️</span>
+                          <span className="font-medium text-sm">Weather Dependent</span>
+                        </div>
+                        <p className="text-yellow-100/90 text-xs mt-1">
+                          Sessions may be cancelled or moved indoors due to weather conditions
+                        </p>
+                      </div>
+                    )}
                   </CardHeader>
                   <CardContent>
                     <p className="text-white/90 mb-4 leading-relaxed">
@@ -415,12 +424,6 @@ const ClassesBooking = () => {
                       <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-white" />
                       <span className="text-sm leading-relaxed text-white/90">
                         £5 for special offers
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-white" />
-                      <span className="text-sm leading-relaxed text-white/90">
-                        £7 for Beach Yoga
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
