@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Heart, Footprints, Sparkles } from 'lucide-react';
+import ScrollAnimate from './ScrollAnimate';
 
 const ServicesSection = () => {
   const services = [
@@ -27,7 +28,7 @@ const ServicesSection = () => {
   return (
     <section id="services" className="pt-8 pb-20 lg:pt-12 lg:pb-32 bg-background">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <ScrollAnimate className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {services.map((service, index) => (
             <div 
               key={index}
@@ -71,7 +72,7 @@ const ServicesSection = () => {
               </div>
             </div>
           ))}
-        </div>
+        </ScrollAnimate>
       </div>
     </section>
   );

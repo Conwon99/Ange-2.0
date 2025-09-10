@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button } from './ui/button';
 import { MessageCircle } from 'lucide-react';
+import { trackBooking, trackContact } from '../lib/analytics';
+import ScrollAnimate from './ScrollAnimate';
 
 const ReflexologySection = () => {
   return (
@@ -8,7 +10,7 @@ const ReflexologySection = () => {
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Content */}
-          <div className="space-y-8">
+          <ScrollAnimate className="space-y-8">
             <div>
               <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
                 <span className="font-rocaone-light">Reflexology</span>{' '}
@@ -61,7 +63,7 @@ const ReflexologySection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="/classes-booking?tab=reflexology" className="bg-purple-600 text-white px-8 py-4 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium text-lg hover:scale-105 transform text-center">
+              <a href="/classes-booking?tab=reflexology" className="bg-purple-600 text-white px-8 py-4 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium text-lg hover:scale-105 transform text-center whitespace-nowrap" onClick={() => trackBooking('Book Treatment', 'Reflexology Section')}>
                 Book Treatment
               </a>
               <a 
@@ -70,12 +72,13 @@ const ReflexologySection = () => {
                 style={{ backgroundColor: '#ffffff', color: '#7756a5', borderColor: '#7756a5' }}
                 onMouseEnter={(e) => { (e.target as HTMLElement).style.backgroundColor = '#7756a5'; (e.target as HTMLElement).style.color = '#ffffff'; }}
                 onMouseLeave={(e) => { (e.target as HTMLElement).style.backgroundColor = '#ffffff'; (e.target as HTMLElement).style.color = '#7756a5'; }}
+                onClick={() => trackContact('Message Button', 'Reflexology Section')}
               >
                 <MessageCircle className="w-5 h-5" />
                 Message
               </a>
             </div>
-          </div>
+          </ScrollAnimate>
 
           {/* Right side - Image */}
           <div>

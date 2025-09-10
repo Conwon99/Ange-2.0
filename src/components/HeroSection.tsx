@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
+import { trackBooking, trackContact } from '../lib/analytics';
 
 const HeroSection = () => {
   return (
@@ -45,10 +46,11 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href="/classes-booking" 
-                className="text-white px-8 py-4 rounded-full transition-all duration-300 font-medium text-lg hover:scale-105 transform inline-block text-center" 
+                className="text-white px-8 py-4 rounded-full transition-all duration-300 font-medium text-lg hover:scale-105 transform inline-block text-center whitespace-nowrap" 
                 style={{backgroundColor: '#7756a5'}} 
                 onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#6a4a8f'} 
                 onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = '#7756a5'}
+                onClick={() => trackBooking('Book Your Class', 'Hero Section')}
               >
                 Book Your Class
               </a>
@@ -58,6 +60,7 @@ const HeroSection = () => {
                 style={{ backgroundColor: '#ffffff', color: '#7756a5', borderColor: '#ffffff' }}
                 onMouseEnter={(e) => { (e.target as HTMLElement).style.backgroundColor = '#f3f4f6'; (e.target as HTMLElement).style.color = '#7756a5'; }}
                 onMouseLeave={(e) => { (e.target as HTMLElement).style.backgroundColor = '#ffffff'; (e.target as HTMLElement).style.color = '#7756a5'; }}
+                onClick={() => trackContact('Message Button', 'Hero Section')}
               >
                 <MessageCircle className="w-5 h-5" />
                 Message

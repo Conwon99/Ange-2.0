@@ -1,11 +1,13 @@
 
 import React from 'react';
+import { trackBooking } from '../lib/analytics';
+import ScrollAnimate from './ScrollAnimate';
 
 const StatsSection = () => {
   return (
     <section className="bg-purple-800 text-white py-16">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-center">
+        <ScrollAnimate className="grid grid-cols-1 md:grid-cols-4 gap-8 items-center">
           {/* Stats */}
           <div className="text-center">
             <div className="text-5xl lg:text-6xl font-bold mb-2 tracking-tight">
@@ -33,11 +35,11 @@ const StatsSection = () => {
             <p className="text-lg mb-4 leading-relaxed">
               Join Ange's holistic wellness community and experience the transformative power of yoga, reflexology, and aromatics. Perfect for beginners and those seeking natural healing.
             </p>
-            <a href="/classes-booking" className="bg-primary text-primary-foreground px-8 py-3 rounded-full hover:bg-primary/90 transition-all duration-300 font-medium inline-block">
+            <a href="/classes-booking" className="bg-primary text-primary-foreground px-8 py-3 rounded-full hover:bg-primary/90 transition-all duration-300 font-medium inline-block whitespace-nowrap" onClick={() => trackBooking('Book Your Class', 'Stats Banner')}>
               Book Your Class
             </a>
           </div>
-        </div>
+        </ScrollAnimate>
       </div>
     </section>
   );

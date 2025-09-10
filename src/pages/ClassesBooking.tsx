@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Calendar, Clock, MapPin, Users, Star, Footprints, Check } from 'lucide-react';
+import { trackBooking, trackContact } from '../lib/analytics';
 
 const ClassesBooking = () => {
   const [activeTab, setActiveTab] = useState<'yoga' | 'reflexology'>('yoga');
@@ -513,7 +514,8 @@ const ClassesBooking = () => {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a 
                       href="https://bookwhen.com/yoga71withange/passes" 
-                      className="bg-purple-600 text-white px-8 py-4 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium text-lg hover:scale-105 transform"
+                      className="bg-purple-600 text-white px-8 py-4 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium text-lg hover:scale-105 transform whitespace-nowrap"
+                      onClick={() => trackBooking('Book Your Class', 'Classes Booking Page - Yoga CTA')}
                     >
                       Book Your Class
                     </a>
@@ -618,7 +620,8 @@ const ClassesBooking = () => {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a 
                       href="/zoom-booking" 
-                      className="bg-purple-600 text-white px-8 py-4 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium text-lg hover:scale-105 transform"
+                      className="bg-purple-600 text-white px-8 py-4 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium text-lg hover:scale-105 transform whitespace-nowrap"
+                      onClick={() => trackContact('Book Treatment', 'Classes Booking Page - Reflexology CTA')}
                     >
                       Book Treatment
                     </a>

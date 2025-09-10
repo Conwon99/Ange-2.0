@@ -3,13 +3,15 @@ import React from 'react';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Button } from './ui/button';
+import { trackContact } from '../lib/analytics';
+import ScrollAnimate from './ScrollAnimate';
 
 const ContactSection = () => {
 
   return (
     <section id="contact" className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <ScrollAnimate className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Images */}
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
@@ -102,9 +104,10 @@ const ContactSection = () => {
                 />
               </div>
 
-              <Button 
+              <Button
                 type="submit"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-medium hover:scale-105 transform transition-all duration-300"
+                onClick={() => trackContact('Contact Form Submit', 'Main Page Contact Section')}
               >
                 Send
               </Button>
@@ -130,7 +133,7 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </ScrollAnimate>
       </div>
     </section>
   );

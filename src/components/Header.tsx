@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { trackNavigation, trackBooking } from '../lib/analytics';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,12 +12,12 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-transparent backdrop-blur-sm fixed top-0 left-0 right-0 z-50" style={{ margin: 0 }}>
+    <header className={`${isMenuOpen ? 'bg-white' : 'bg-transparent backdrop-blur-sm'} fixed top-0 left-0 right-0 z-50`} style={{ margin: 0 }}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center" onClick={() => trackNavigation('Logo', 'Header')}>
               <img 
                 src="/Logo with ange.png" 
                 alt="Ange Wellness" 
@@ -55,7 +56,7 @@ const Header = () => {
 
           {/* Desktop Book Now Button */}
           <div className="hidden md:block">
-            <Link to="/classes-booking" className="text-white px-6 py-2 rounded-full transition-colors duration-200 font-medium" style={{backgroundColor: '#7756a5'}} onMouseEnter={(e) => e.target.style.backgroundColor = '#6a4a8f'} onMouseLeave={(e) => e.target.style.backgroundColor = '#7756a5'}>
+            <Link to="/classes-booking" className="text-white px-6 py-2 rounded-full transition-colors duration-200 font-medium whitespace-nowrap min-w-[100px]" style={{backgroundColor: '#7756a5'}} onMouseEnter={(e) => e.target.style.backgroundColor = '#6a4a8f'} onMouseLeave={(e) => e.target.style.backgroundColor = '#7756a5'} onClick={() => trackBooking('Book Now', 'Header Desktop')}>
               Book Now
             </Link>
           </div>
@@ -71,7 +72,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-border pt-4">
+          <nav className="md:hidden mt-4 pb-4 border-t border-border pt-4 bg-white">
             <div className="flex flex-col space-y-4">
               <Link 
                 to="/" 
@@ -134,11 +135,11 @@ const Header = () => {
             <div className="mt-6 pt-4 border-t border-border">
               <Link 
                 to="/classes-booking" 
-                className="text-white px-6 py-2 rounded-full transition-colors duration-200 font-medium text-center block" 
+                className="text-white px-6 py-2 rounded-full transition-colors duration-200 font-medium text-center block whitespace-nowrap min-w-[100px]" 
                 style={{backgroundColor: '#7756a5'}} 
                 onMouseEnter={(e) => e.target.style.backgroundColor = '#6a4a8f'} 
                 onMouseLeave={(e) => e.target.style.backgroundColor = '#7756a5'}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => { setIsMenuOpen(false); trackBooking('Book Now', 'Header Mobile'); }}
               >
                 Book Now
               </Link>

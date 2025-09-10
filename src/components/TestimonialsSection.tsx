@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Star } from 'lucide-react';
+import ScrollAnimate from './ScrollAnimate';
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -27,8 +28,17 @@ const TestimonialsSection = () => {
   return (
     <section id="testimonials" className="pt-8 pb-20 lg:pt-12 lg:pb-32 bg-background">
       <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
+            <span className="font-rocaone-light">What My</span>{' '}
+            <span className="italic font-playfair text-foreground">Clients Say</span>
+          </h2>
+          <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Real experiences from my yoga and reflexology clients
+          </p>
+        </div>
 
-        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
+        <ScrollAnimate className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
@@ -57,7 +67,7 @@ const TestimonialsSection = () => {
               </p>
             </div>
           ))}
-        </div>
+        </ScrollAnimate>
       </div>
     </section>
   );

@@ -1,17 +1,18 @@
 
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import ScrollAnimate from './ScrollAnimate';
 
 const TeamSection = () => {
   return (
     <section id="about" className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-6">
-        <div className="mb-16">
+        <ScrollAnimate className="mb-16">
           <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
             <span className="font-rocaone-light">About</span>{' '}
             <span className="italic font-playfair text-foreground">Ange</span>
           </h2>
-        </div>
+        </ScrollAnimate>
 
         <div className="grid lg:grid-cols-3 gap-8 items-stretch">
           {/* Philosophy Card */}

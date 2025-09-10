@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger 
 } from './ui/accordion';
+import ScrollAnimate from './ScrollAnimate';
 
 const FAQSection = () => {
   const faqs = [
@@ -38,7 +39,7 @@ const FAQSection = () => {
   return (
     <section id="faq" className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12">
+        <ScrollAnimate className="grid lg:grid-cols-2 gap-12">
           {/* Left side - Title and description */}
           <div>
             <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
@@ -71,7 +72,7 @@ const FAQSection = () => {
               ))}
             </Accordion>
           </div>
-        </div>
+        </ScrollAnimate>
       </div>
     </section>
   );

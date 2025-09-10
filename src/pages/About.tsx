@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { trackBooking, trackContact } from '../lib/analytics';
+import ScrollAnimate from '../components/ScrollAnimate';
 
 const About = () => {
   return (
@@ -13,14 +15,14 @@ const About = () => {
         {/* Hero Section */}
         <section className="py-20 lg:py-32 bg-gradient-to-br from-wellness-green-50 to-wellness-green-100">
           <div className="container mx-auto px-6">
-            <div className="text-center max-w-4xl mx-auto">
+            <ScrollAnimate className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl lg:text-7xl font-normal leading-tight text-foreground mb-6 font-rocaone">
                 About Ange
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 My journey from discovering yoga in Edinburgh to becoming a holistic wellness practitioner in Ayrshire.
               </p>
-            </div>
+            </ScrollAnimate>
           </div>
         </section>
 
@@ -112,13 +114,15 @@ const About = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a 
                     href="https://bookwhen.com/yoga71withange" 
-                    className="bg-primary-foreground text-primary px-8 py-4 rounded-full hover:bg-primary-foreground/90 transition-colors duration-300 font-medium text-lg"
+                    className="bg-primary-foreground text-primary px-8 py-4 rounded-full hover:bg-primary-foreground/90 transition-colors duration-300 font-medium text-lg whitespace-nowrap"
+                    onClick={() => trackBooking('Book Your First Class', 'About Page - Philosophy Section')}
                   >
                     Book Your First Class
                   </a>
                   <a 
-                    href="/#contact" 
+                    href="/zoom-booking" 
                     className="border-2 border-primary-foreground text-primary-foreground px-8 py-4 rounded-full hover:bg-primary-foreground hover:text-primary transition-all duration-300 font-medium text-lg"
+                    onClick={() => trackContact('Get in Touch', 'About Page - Philosophy Section')}
                   >
                     Get in Touch
                   </a>
@@ -198,13 +202,15 @@ const About = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
                   href="https://bookwhen.com/yoga71withange" 
-                  className="bg-wellness-green-600 text-white px-8 py-4 rounded-full hover:bg-wellness-green-700 transition-colors duration-300 font-medium text-lg"
+                  className="bg-wellness-green-600 text-white px-8 py-4 rounded-full hover:bg-wellness-green-700 transition-colors duration-300 font-medium text-lg whitespace-nowrap"
+                  onClick={() => trackBooking('Book Your First Class', 'About Page - CTA Section')}
                 >
                   Book Your First Class
                 </a>
                 <a 
-                  href="/#contact" 
+                  href="/zoom-booking" 
                   className="border-2 border-wellness-green-600 text-wellness-green-600 px-8 py-4 rounded-full hover:bg-wellness-green-600 hover:text-white transition-all duration-300 font-medium text-lg"
+                  onClick={() => trackContact('Contact Ange', 'About Page - CTA Section')}
                 >
                   Contact Ange
                 </a>

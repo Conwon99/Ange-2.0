@@ -3,6 +3,8 @@ import React from 'react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Check } from 'lucide-react';
+import { trackBooking, trackContact } from '../lib/analytics';
+import ScrollAnimate from './ScrollAnimate';
 
 const PricingSection = () => {
   const plans = [
@@ -54,7 +56,7 @@ const PricingSection = () => {
   return (
     <section id="pricing" className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <ScrollAnimate className="text-center mb-16">
           <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
             <span className="font-rocaone-light">Transform</span>{' '}
             <span className="italic font-playfair text-foreground">Your</span>
@@ -68,7 +70,7 @@ const PricingSection = () => {
           <p className="text-base text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Choose the perfect wellness package for your journey. All prices include personalized attention and holistic healing approaches from Ange's 7+ years of experience in Ayrshire.
           </p>
-        </div>
+        </ScrollAnimate>
 
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
@@ -112,6 +114,13 @@ const PricingSection = () => {
                       ? 'bg-white text-purple-600 hover:bg-white/90 border border-white/20' 
                       : 'bg-purple-600 text-white hover:bg-purple-700 border border-purple-600'
                   }`}
+                  onClick={() => {
+                    if (plan.name === "Unlimited Zoom-Only") {
+                      trackContact('Book Pass', 'Pricing Section - Zoom Only');
+                    } else {
+                      trackBooking('Book Pass/Class', `Pricing Section - ${plan.name}`);
+                    }
+                  }}
                 >
                   {plan.buttonText}
                 </a>

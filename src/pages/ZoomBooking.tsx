@@ -7,6 +7,7 @@ import { MessageCircle, Phone, Mail, Send, CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useSearchParams } from "react-router-dom";
+import { trackContact } from "../lib/analytics";
 
 export default function ZoomBooking() {
   const [searchParams] = useSearchParams();
@@ -206,9 +207,10 @@ export default function ZoomBooking() {
                       required
                     />
                   </div>
-                  <Button 
+                  <Button
                     type="submit"
                     className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 text-lg font-medium"
+                    onClick={() => trackContact('Contact Form Submit', 'Contact Page')}
                   >
                     <Send className="w-5 h-5 mr-2" />
                     Send Message
