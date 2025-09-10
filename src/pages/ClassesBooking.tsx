@@ -269,17 +269,17 @@ const ClassesBooking = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="flex flex-col gap-2">
+                      <div className="flex flex-row gap-2">
                         <a 
                           href="https://bookwhen.com/yoga71withange" 
-                          className="bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium text-sm hover:scale-105 transform whitespace-nowrap text-center w-24"
+                          className="bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition-all duration-300 font-medium text-sm hover:scale-105 transform whitespace-nowrap text-center w-24 flex items-center justify-center"
                         >
                           Book
                         </a>
                         {location.zoom && (
                           <a 
                             href="/zoom-booking" 
-                            className="bg-purple-100 text-purple-600 px-4 py-2 rounded-full hover:bg-purple-200 transition-all duration-300 font-medium text-sm hover:scale-105 transform whitespace-nowrap text-center border border-purple-300 w-24"
+                            className="bg-purple-100 text-purple-600 px-4 py-2 rounded-full hover:bg-purple-200 transition-all duration-300 font-medium text-sm hover:scale-105 transform whitespace-nowrap text-center border border-purple-300 w-24 flex items-center justify-center"
                           >
                             Book Zoom
                           </a>
