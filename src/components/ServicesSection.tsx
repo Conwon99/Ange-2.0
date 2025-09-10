@@ -25,18 +25,8 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-20 lg:py-32 bg-background">
+    <section id="services" className="pt-8 pb-20 lg:pt-12 lg:pb-32 bg-background">
       <div className="container mx-auto px-6">
-        <div className="mb-16">
-          <h2 className="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
-            <span className="font-rocaone-light">My</span>{' '}
-            <span className="italic font-playfair text-foreground">Services</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            I offer a holistic approach to wellness through yoga, reflexology, and aromatics. Perfect for beginners and those seeking natural healing and balance.
-          </p>
-        </div>
-
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {services.map((service, index) => (
             <div 

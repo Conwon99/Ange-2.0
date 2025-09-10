@@ -34,7 +34,7 @@ const HeroSection = () => {
               <h1 className="text-5xl lg:text-7xl font-normal leading-tight text-foreground tracking-tight">
                 <span className="font-rocaone">Yoga, Reflexology & Aromatherapy</span>
                 <br />
-                <span className="italic font-playfair text-purple-600">with Ange</span>
+                <span className="italic font-playfair" style={{color: '#7756a5'}}>with Ange</span>
               </h1>
               
               <p className="text-lg lg:text-xl text-foreground max-w-lg leading-relaxed">

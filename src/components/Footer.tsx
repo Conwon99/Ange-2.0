@@ -29,10 +29,10 @@ const Footer = () => {
               <li><Link to="/" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Home</Link></li>
               <li><Link to="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">About</Link></li>
               <li><Link to="/classes-booking" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Classes & Booking</Link></li>
-              <li><a href="/#services" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Services</a></li>
+              <li><Link to="/services" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Services</Link></li>
               <li><Link to="/pricing" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Pricing</Link></li>
-              <li><a href="/#testimonials" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Testimonials</a></li>
-              <li><a href="/#faq" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">FAQs</a></li>
+              <li><Link to="/testimonials" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Testimonials</Link></li>
+              <li><Link to="/faq" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">FAQs</Link></li>
               <li><Link to="/zoom-booking" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Contact</Link></li>
             </ul>
           </div>

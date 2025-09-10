@@ -36,16 +36,16 @@ const Header = () => {
             <Link to="/classes-booking" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               Classes & Booking
             </Link>
-            <Link to="/#services" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
+            <Link to="/services" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               Services
             </Link>
             <Link to="/pricing" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               Pricing
             </Link>
-            <Link to="/#testimonials" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
+            <Link to="/testimonials" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               Testimonials
             </Link>
-            <Link to="/#faq" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
+            <Link to="/faq" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
               FAQs
             </Link>
             <Link to="/zoom-booking" className="text-foreground hover:text-primary transition-colors duration-200 drop-shadow-sm">
@@ -95,7 +95,7 @@ const Header = () => {
                 Classes & Booking
               </Link>
               <Link 
-                to="/#services" 
+                to="/services" 
                 className="text-foreground hover:text-primary transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -109,14 +109,14 @@ const Header = () => {
                 Pricing
               </Link>
               <Link 
-                to="/#testimonials" 
+                to="/testimonials" 
                 className="text-foreground hover:text-primary transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Testimonials
               </Link>
               <Link 
-                to="/#faq" 
+                to="/faq" 
                 className="text-foreground hover:text-primary transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
