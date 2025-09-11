@@ -62,7 +62,7 @@ const Footer = () => {
 
         <div className="border-t border-purple-300/30 mt-8 pt-8 text-center">
           <p className="text-purple-200 flex items-center justify-center gap-2">
-            Made with <Heart className="w-4 h-4 text-red-400" /> for your holistic wellness journey
+            Website made by <a href="https://connorsdesignsolutions.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-purple-100 transition-colors duration-200 underline">Connor's Design Solutions</a>
           </p>
           <p className="text-purple-200 text-sm mt-2">
             © 2024 Holistics71 with Ange. Serving Troon, Irvine, and Kilwinning, Ayrshire.

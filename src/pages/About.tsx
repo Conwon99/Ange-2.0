@@ -87,7 +87,7 @@ const About = () => {
                       My passion for holistic wellbeing led me to train in Reflexology and Aromatherapy, both of which beautifully complement Yoga. Together, these therapies support the body and mind—encouraging balance, easing stress, improving sleep, and enhancing energy.
                     </p>
                     <p>
-                      With over 25 years' experience teaching in Further Education (English and Support for Learning), I bring a strong understanding of how to create inclusive, supportive learning environments. It's important to me that everyone who joins us feels welcome, empowered, and in tune with their own body.
+                      With over 25 years experience teaching in Further Education (English and Support for Learning), I bring a strong understanding of how to create inclusive, supportive learning environments. It's important to me that everyone who joins us feels welcome, empowered, and in tune with their own body.
                     </p>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ const About = () => {
                 </blockquote>
                 <p className="text-lg text-primary-foreground/80 mb-8">B.K.S. Iyengar</p>
                 <p className="text-xl text-primary-foreground/90 leading-relaxed mb-8">
-                  At Holistics71, I simply aim to guide and support your journey with compassion, knowledge, and care. Yoga and Reflexology have been life-changing for me—and I hope they offer the same for you.
+                  At Holistics71, I simply aim to guide and support your journey with compassion, knowledge and care. Yoga and Reflexology have been life-changing for me—and I hope they offer the same for you.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a 
@@ -141,7 +141,7 @@ const About = () => {
                   Qualifications & Experience
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                  Over 25 years of teaching experience combined with specialized training in holistic wellness.
+                  Over 25 years of teaching experience combined with specialised training in holistic wellness.
                 </p>
               </div>
 
@@ -154,7 +154,7 @@ const About = () => {
                     </div>
                     <h3 className="text-2xl font-rocaone text-foreground mb-4">Yoga Teacher Training</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      200 YTT qualified yoga teacher since 2018. Specializing in Hatha and Yin styles with 7+ years of teaching experience.
+                      200 YTT qualified yoga teacher since 2018. Specialising in Hatha and Yin styles with 7+ years of teaching experience.
                     </p>
                   </div>
                 </div>
