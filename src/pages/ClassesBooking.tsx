@@ -58,7 +58,8 @@ const ClassesBooking = () => {
       day: "Wednesday",
       time: "7:00 PM",
       type: "£9",
-      weather: "Alternative to beach"
+      weather: "Alternative to beach",
+      zoom: true
     },
     {
       name: "Corespace Kilwinning",
